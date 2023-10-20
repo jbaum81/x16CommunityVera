@@ -15,6 +15,7 @@ module video_modulator_mult_u8xu8_pair (
     assign output_1_16 = output_32[15:0];
     assign output_2_16 = output_32[31:16];
 
+/*
     pmi_dsp mult8x8 ( // port interfaces
         .A({input_2a_8, input_1a_8}),
         .B({input_2b_8, input_1b_8}),
@@ -48,5 +49,5 @@ module video_modulator_mult_u8xu8_pair (
     defparam mult8x8.BOTOUTPUT_SELECT = 2'b10; //Mult8x8 data output
     defparam mult8x8.A_SIGNED = 1'b0; //Unsigned Inputs
     defparam mult8x8.B_SIGNED = 1'b0; //Unsigned Inputs
-    
+    */
 endmodule

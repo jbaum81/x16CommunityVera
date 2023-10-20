@@ -1,0 +1,804 @@
+
+*** Running vivado
+    with args -log MercuryII_Vera.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source MercuryII_Vera.tcl
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source MercuryII_Vera.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/utils_1/imports/synth_1/MercuryII_Vera.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/utils_1/imports/synth_1/MercuryII_Vera.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top MercuryII_Vera -part xc7a35tftg256-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tftg256-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10708
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1298.547 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'MercuryII_Vera' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/MercuryII_Vera.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-25176-DESKTOP-4FV4FV1/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-25176-DESKTOP-4FV4FV1/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'reset_sync' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/reset_sync.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'reset_sync' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/reset_sync.v:3]
+INFO: [Synth 8-6157] synthesizing module 'addr_data' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/addr_data.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'addr_data' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/addr_data.v:3]
+INFO: [Synth 8-6157] synthesizing module 'vram_if' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/vram_if.v:3]
+INFO: [Synth 8-6157] synthesizing module 'main_ram' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/main_ram.v:3]
+INFO: [Synth 8-6157] synthesizing module 'SP256K' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-25176-DESKTOP-4FV4FV1/realtime/SP256K_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'SP256K' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-25176-DESKTOP-4FV4FV1/realtime/SP256K_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_ram' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/main_ram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vram_if' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/vram_if.v:3]
+INFO: [Synth 8-6157] synthesizing module 'layer_renderer' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/layer_renderer.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/layer_renderer.v:246]
+INFO: [Synth 8-6155] done synthesizing module 'layer_renderer' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/layer_renderer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'layer_line_buffer' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/layer_line_buffer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dpram' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/dpram.v:3]
+	Parameter ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dpram' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/dpram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'layer_line_buffer' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/layer_line_buffer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sprite_renderer' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/sprite_renderer.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/sprite_renderer.v:138]
+INFO: [Synth 8-6155] done synthesizing module 'sprite_renderer' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/sprite_renderer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sprite_line_buffer' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/sprite_line_buffer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dpram__parameterized0' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/dpram.v:3]
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dpram__parameterized0' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/dpram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'sprite_line_buffer' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/sprite_line_buffer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sprite_ram' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-25176-DESKTOP-4FV4FV1/realtime/sprite_ram_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'sprite_ram' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-25176-DESKTOP-4FV4FV1/realtime/sprite_ram_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'composer' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/composer.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'composer' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/composer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'palette_ram' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-25176-DESKTOP-4FV4FV1/realtime/palette_ram_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'palette_ram' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-25176-DESKTOP-4FV4FV1/realtime/palette_ram_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'video_composite' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_composite.v:3]
+INFO: [Synth 8-6157] synthesizing module 'video_modulator' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator.v:3]
+INFO: [Synth 8-6157] synthesizing module 'video_modulator_mult_u8xu8_pair' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'video_modulator_mult_u8xu8_pair' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:3]
+INFO: [Synth 8-6157] synthesizing module 'video_modulator_sinlut' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_sinlut.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'video_modulator_sinlut' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_sinlut.v:3]
+INFO: [Synth 8-6157] synthesizing module 'video_modulator_coslut' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_coslut.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'video_modulator_coslut' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_coslut.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'video_modulator' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'video_composite' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_composite.v:3]
+INFO: [Synth 8-6157] synthesizing module 'video_vga' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_vga.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'video_vga' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_vga.v:3]
+INFO: [Synth 8-6157] synthesizing module 'spictrl' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/spi/spictrl.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'spictrl' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/spi/spictrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'audio' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/audio.v:3]
+INFO: [Synth 8-6157] synthesizing module 'psg' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/psg.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dpram__parameterized1' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/dpram.v:3]
+	Parameter ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dpram__parameterized1' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/dpram.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dpram__parameterized2' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/dpram.v:3]
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter DATA_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dpram__parameterized2' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/dpram.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/psg.v:208]
+INFO: [Synth 8-6155] done synthesizing module 'psg' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/psg.v:3]
+INFO: [Synth 8-6157] synthesizing module 'pcm' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/pcm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'audio_fifo' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/audio_fifo.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'audio_fifo' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/audio_fifo.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/pcm.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'pcm' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/pcm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dacif' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/dacif.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'dacif' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/dacif.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'audio' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/audio.v:3]
+WARNING: [Synth 8-7071] port 'next_sample' of module 'audio' is unconnected for instance 'audio' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:1228]
+WARNING: [Synth 8-7071] port 'left_data' of module 'audio' is unconnected for instance 'audio' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:1228]
+WARNING: [Synth 8-7071] port 'right_data' of module 'audio' is unconnected for instance 'audio' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:1228]
+WARNING: [Synth 8-7023] instance 'audio' of module 'audio' has 21 connections declared, but only 18 given [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:1228]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'hdmiEncoder' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/hdmiEncoder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'tmdsEncoder' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/tmdsEncoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'tmdsEncoder' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/tmdsEncoder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:71234]
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (0#1) [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:71234]
+INFO: [Synth 8-6155] done synthesizing module 'hdmiEncoder' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/hdmiEncoder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MercuryIIDAC' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/MercuryIIDAC.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/MercuryIIDAC.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'MercuryIIDAC' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/MercuryIIDAC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MercuryII_Vera' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/MercuryII_Vera.v:23]
+WARNING: [Synth 8-6014] Unused sequential element fx_mult_enabled_r_reg was removed.  [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/addr_data.v:988]
+WARNING: [Synth 8-6014] Unused sequential element fx_reset_accum_r_reg was removed.  [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/addr_data.v:989]
+WARNING: [Synth 8-6014] Unused sequential element fx_accumulate_r_reg was removed.  [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/addr_data.v:990]
+WARNING: [Synth 8-6014] Unused sequential element fx_add_or_sub_r_reg was removed.  [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/addr_data.v:991]
+WARNING: [Synth 8-3848] Net ib_mult_accum_cache32 in module/entity addr_data does not have driver. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/addr_data.v:35]
+WARNING: [Synth 8-3848] Net output_32 in module/entity video_modulator_mult_u8xu8_pair does not have driver. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:14]
+WARNING: [Synth 8-7137] Register sr_accum7_r_reg in module pcm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/pcm.v:66]
+WARNING: [Synth 8-6014] Unused sequential element fpga_reconfigure_r_reg was removed.  [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:510]
+WARNING: [Synth 8-3848] Net vera_audio_data_left in module/entity top does not have driver. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:38]
+WARNING: [Synth 8-3848] Net vera_audio_data_right in module/entity top does not have driver. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:39]
+WARNING: [Synth 8-3848] Net vera_audio_next_sample in module/entity top does not have driver. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:40]
+WARNING: [Synth 8-3848] Net led in module/entity MercuryII_Vera does not have driver. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/MercuryII_Vera.v:51]
+WARNING: [Synth 8-3848] Net sram_a in module/entity MercuryII_Vera does not have driver. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/MercuryII_Vera.v:55]
+WARNING: [Synth 8-3848] Net sram_wen in module/entity MercuryII_Vera does not have driver. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/MercuryII_Vera.v:57]
+WARNING: [Synth 8-3848] Net sram_cen in module/entity MercuryII_Vera does not have driver. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/MercuryII_Vera.v:58]
+WARNING: [Synth 8-7129] Port vera_audio_data_left[11] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_left[10] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_left[9] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_left[8] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_left[7] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_left[6] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_left[5] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_left[4] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_left[3] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_left[2] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_left[1] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_left[0] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_right[11] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_right[10] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_right[9] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_right[8] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_right[7] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_right[6] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_right[5] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_right[4] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_right[3] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_right[2] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_right[1] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vera_audio_data_right[0] in module MercuryIIDAC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_1_16[15] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_1_16[14] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_1_16[13] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_1_16[12] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_1_16[11] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_1_16[10] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_1_16[9] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_1_16[8] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_1_16[7] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_1_16[6] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_1_16[5] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_1_16[4] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_1_16[3] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_1_16[2] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_1_16[1] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_1_16[0] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_2_16[15] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_2_16[14] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_2_16[13] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_2_16[12] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_2_16[11] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_2_16[10] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_2_16[9] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_2_16[8] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_2_16[7] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_2_16[6] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_2_16[5] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_2_16[4] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_2_16[3] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_2_16[2] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_2_16[1] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_2_16[0] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_1a_8[7] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_1a_8[6] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_1a_8[5] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_1a_8[4] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_1a_8[3] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_1a_8[2] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_1a_8[1] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_1a_8[0] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_1b_8[7] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_1b_8[6] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_1b_8[5] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_1b_8[4] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_1b_8[3] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_1b_8[2] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_1b_8[1] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_1b_8[0] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_2a_8[7] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_2a_8[6] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_2a_8[5] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_2a_8[4] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_2a_8[3] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_2a_8[2] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_2a_8[1] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_2a_8[0] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_2b_8[7] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_2b_8[6] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_2b_8[5] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_2b_8[4] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_2b_8[3] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_2b_8[2] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_2b_8[1] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port input_2b_8[0] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_lb_rddata[15] in module composer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_lb_rddata[14] in module composer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_lb_rddata[13] in module composer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_lb_rddata[12] in module composer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_lb_rddata[11] in module composer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_lb_rddata[10] in module composer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_attr[14] in module sprite_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_attr[13] in module sprite_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_attr[12] in module sprite_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port linebuf_rddata[11] in module sprite_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port linebuf_rddata[10] in module sprite_renderer is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1298.547 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1298.547 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1298.547 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1298.547 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'mmcm0'
+Finished Parsing XDC File [c:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'mmcm0'
+Parsing XDC File [c:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.gen/sources_1/ip/sprite_ram/sprite_ram/sprite_ram_in_context.xdc] for cell 'vera0/sprite_attr_ram'
+Finished Parsing XDC File [c:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.gen/sources_1/ip/sprite_ram/sprite_ram/sprite_ram_in_context.xdc] for cell 'vera0/sprite_attr_ram'
+Parsing XDC File [c:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.gen/sources_1/ip/palette_ram/palette_ram/palette_ram_in_context.xdc] for cell 'vera0/palette_ram'
+Finished Parsing XDC File [c:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.gen/sources_1/ip/palette_ram/palette_ram/palette_ram_in_context.xdc] for cell 'vera0/palette_ram'
+Parsing XDC File [c:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.gen/sources_1/ip/SP256K/SP256K/SP256K_in_context.xdc] for cell 'vera0/vram_if/main_ram/blk0'
+Finished Parsing XDC File [c:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.gen/sources_1/ip/SP256K/SP256K/SP256K_in_context.xdc] for cell 'vera0/vram_if/main_ram/blk0'
+Parsing XDC File [c:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.gen/sources_1/ip/SP256K/SP256K/SP256K_in_context.xdc] for cell 'vera0/vram_if/main_ram/blk1'
+Finished Parsing XDC File [c:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.gen/sources_1/ip/SP256K/SP256K/SP256K_in_context.xdc] for cell 'vera0/vram_if/main_ram/blk1'
+Parsing XDC File [c:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.gen/sources_1/ip/SP256K/SP256K/SP256K_in_context.xdc] for cell 'vera0/vram_if/main_ram/blk2'
+Finished Parsing XDC File [c:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.gen/sources_1/ip/SP256K/SP256K/SP256K_in_context.xdc] for cell 'vera0/vram_if/main_ram/blk2'
+Parsing XDC File [c:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.gen/sources_1/ip/SP256K/SP256K/SP256K_in_context.xdc] for cell 'vera0/vram_if/main_ram/blk3'
+Finished Parsing XDC File [c:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.gen/sources_1/ip/SP256K/SP256K/SP256K_in_context.xdc] for cell 'vera0/vram_if/main_ram/blk3'
+Parsing XDC File [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk_en'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'fpga_done'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'fpga_prog'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'dio[2]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'dio[9]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'cpuRdy'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:82]
+WARNING: [Vivado 12-584] No ports matched 'cpuBE'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:83]
+WARNING: [Vivado 12-584] No ports matched 'nmi'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:84]
+WARNING: [Vivado 12-584] No ports matched 'adrDir'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:85]
+WARNING: [Vivado 12-584] No ports matched 'vclk'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:86]
+WARNING: [Vivado 12-584] No ports matched 'io[1]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:90]
+WARNING: [Vivado 12-584] No ports matched 'io[2]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:91]
+WARNING: [Vivado 12-584] No ports matched 'adc_miso'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:100]
+WARNING: [Vivado 12-584] No ports matched 'adc_mosi'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:101]
+WARNING: [Vivado 12-584] No ports matched 'adc_sck'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:102]
+WARNING: [Vivado 12-584] No ports matched 'adc_csn'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:103]
+WARNING: [Vivado 12-584] No ports matched 'xadc_vp'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:106]
+WARNING: [Vivado 12-584] No ports matched 'xadc_vn'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:107]
+WARNING: [Vivado 12-584] No ports matched 'xadc_vref_p'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:108]
+WARNING: [Vivado 12-584] No ports matched 'xadc_vref_n'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:109]
+WARNING: [Vivado 12-584] No ports matched 'eth_txd[0]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:150]
+WARNING: [Vivado 12-584] No ports matched 'eth_txd[1]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:151]
+WARNING: [Vivado 12-584] No ports matched 'eth_txen'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:152]
+WARNING: [Vivado 12-584] No ports matched 'eth_crsdv'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:153]
+WARNING: [Vivado 12-584] No ports matched 'eth_rxd[0]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:154]
+WARNING: [Vivado 12-584] No ports matched 'eth_rxd[1]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:155]
+WARNING: [Vivado 12-584] No ports matched 'eth_rxer'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:156]
+WARNING: [Vivado 12-584] No ports matched 'eth_mdc'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:157]
+WARNING: [Vivado 12-584] No ports matched 'eth_mdio'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:158]
+WARNING: [Vivado 12-584] No ports matched 'eth_intn'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:159]
+WARNING: [Vivado 12-584] No ports matched 'eth_rstn'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:160]
+WARNING: [Vivado 12-584] No ports matched 'eth_led1'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:161]
+WARNING: [Vivado 12-584] No ports matched 'eth_led2'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:162]
+WARNING: [Vivado 12-584] No ports matched 'eth_clk'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:163]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_acbus[3]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:166]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_acbus[4]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:167]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_acbus[5]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:168]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_acbus[6]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:169]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_acbus[7]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:170]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_bcbus[0]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:171]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_bcbus[1]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:172]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_bcbus[2]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:173]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_bcbus[3]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:174]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_bcbus[4]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:175]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_bcbus[5]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:176]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_bcbus[6]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:177]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_bdbus[0]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:178]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_bdbus[1]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:179]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_bdbus[2]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:180]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_bdbus[3]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:181]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_bdbus[4]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:182]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_bdbus[5]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:183]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_bdbus[6]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:184]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_bdbus[7]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:185]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_pwren'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:186]
+WARNING: [Vivado 12-584] No ports matched 'ftdi_suspend'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:187]
+WARNING: [Vivado 12-584] No ports matched 'flash_mosi'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:190]
+WARNING: [Vivado 12-584] No ports matched 'flash_miso'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:191]
+WARNING: [Vivado 12-584] No ports matched 'flash_csn'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:192]
+WARNING: [Vivado 12-584] No ports matched 'flash_sck'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:193]
+WARNING: [Vivado 12-584] No ports matched 'jtag_tdi'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:196]
+WARNING: [Vivado 12-584] No ports matched 'jtag_tdo'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:197]
+WARNING: [Vivado 12-584] No ports matched 'jtag_tck'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:198]
+WARNING: [Vivado 12-584] No ports matched 'jtag_tms'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:199]
+WARNING: [Vivado 12-584] No ports matched 'wifi_rx'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:202]
+WARNING: [Vivado 12-584] No ports matched 'wifi_tx'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:203]
+WARNING: [Vivado 12-584] No ports matched 'wifi_rst'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:204]
+WARNING: [Vivado 12-584] No ports matched 'wifi_en'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:205]
+WARNING: [Vivado 12-627] No clocks matched 'brdclk'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:210]
+WARNING: [Vivado 12-627] No clocks matched 'bwrclk'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:210]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:210]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks {brdclk bwrclk}]'. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:210]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc:210]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/MercuryII_Vera_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/MercuryII_Vera_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/MercuryII_Vera_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1368.156 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 4 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1368.156 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1368.156 ; gain = 69.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tftg256-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1368.156 ; gain = 69.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property KEEP_HIERARCHY = SOFT for mmcm0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for vera0/sprite_attr_ram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for vera0/palette_ram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for vera0/vram_if/main_ram/blk0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for vera0/vram_if/main_ram/blk1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for vera0/vram_if/main_ram/blk2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for vera0/vram_if/main_ram/blk3. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1368.156 ; gain = 69.609
+---------------------------------------------------------------------------------
+DSP Debug: swapped A/B pins for adder 00000141DE898B60
+DSP Debug: swapped A/B pins for adder 00000141DE899E20
+INFO: [Synth 8-802] inferred FSM for state register 'state_r_reg' in module 'psg'
+INFO: [Synth 8-802] inferred FSM for state register 'mdac_state_reg' in module 'MercuryIIDAC'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                               00
+                FETCH_CH |                              010 |                               01
+                 CALC_CH |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_r_reg' using encoding 'one-hot' in module 'psg'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE3 |                             0000 |                             0000
+                 iSTATE2 |                             0001 |                             0001
+                 iSTATE1 |                             0010 |                             0010
+                  iSTATE |                             0011 |                             0011
+                 iSTATE0 |                             0100 |                             0100
+                 iSTATE7 |                             0101 |                             0101
+                 iSTATE5 |                             0110 |                             0110
+                 iSTATE4 |                             0111 |                             0111
+                 iSTATE6 |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'mdac_state_reg' using encoding 'sequential' in module 'MercuryIIDAC'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1368.156 ; gain = 69.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   20 Bit       Adders := 2     
+	   2 Input   17 Bit       Adders := 7     
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input   15 Bit       Adders := 5     
+	   2 Input   12 Bit       Adders := 7     
+	   5 Input   12 Bit       Adders := 1     
+	   6 Input   12 Bit       Adders := 1     
+	   4 Input   12 Bit       Adders := 1     
+	   3 Input   12 Bit       Adders := 1     
+	   3 Input   11 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 3     
+	   3 Input   10 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 12    
+	   2 Input    8 Bit       Adders := 9     
+	   2 Input    6 Bit       Adders := 2     
+	   3 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 3     
+	   8 Input    4 Bit       Adders := 6     
+	   7 Input    4 Bit       Adders := 3     
+	   3 Input    4 Bit       Adders := 3     
+	   6 Input    4 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 2     
+	   3 Input    3 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 3     
++---XORs : 
+	   2 Input      8 Bit         XORs := 3     
+	   3 Input      7 Bit         XORs := 3     
+	   2 Input      6 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 6     
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 9     
+	               25 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               23 Bit    Registers := 1     
+	               20 Bit    Registers := 2     
+	               17 Bit    Registers := 3     
+	               16 Bit    Registers := 18    
+	               15 Bit    Registers := 5     
+	               12 Bit    Registers := 7     
+	               11 Bit    Registers := 3     
+	               10 Bit    Registers := 19    
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 45    
+	                6 Bit    Registers := 8     
+	                5 Bit    Registers := 6     
+	                4 Bit    Registers := 20    
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 23    
+	                1 Bit    Registers := 115   
++---RAMs : 
+	              32K Bit	(4096 X 8 bit)          RAMs := 1     
+	               4K Bit	(512 X 8 bit)          RAMs := 6     
+	               4K Bit	(256 X 16 bit)          RAMs := 8     
+	              512 Bit	(64 X 8 bit)          RAMs := 1     
+	              368 Bit	(16 X 23 bit)          RAMs := 1     
++---ROMs : 
+	                    ROMs := 2     
++---Muxes : 
+	  13 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 3     
+	   3 Input   32 Bit        Muxes := 2     
+	   2 Input   25 Bit        Muxes := 2     
+	   2 Input   20 Bit        Muxes := 6     
+	   2 Input   17 Bit        Muxes := 6     
+	   6 Input   17 Bit        Muxes := 3     
+	   4 Input   17 Bit        Muxes := 1     
+	   4 Input   16 Bit        Muxes := 4     
+	   2 Input   16 Bit        Muxes := 13    
+	   3 Input   16 Bit        Muxes := 2     
+	   7 Input   16 Bit        Muxes := 6     
+	   9 Input   16 Bit        Muxes := 1     
+	   4 Input   15 Bit        Muxes := 13    
+	   2 Input   15 Bit        Muxes := 16    
+	   7 Input   15 Bit        Muxes := 2     
+	   2 Input   14 Bit        Muxes := 1     
+	   4 Input   14 Bit        Muxes := 1     
+	   3 Input   12 Bit        Muxes := 1     
+	   4 Input   12 Bit        Muxes := 2     
+	  36 Input   11 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 3     
+	   3 Input   10 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 18    
+	   4 Input   10 Bit        Muxes := 2     
+	   5 Input   10 Bit        Muxes := 3     
+	   2 Input    9 Bit        Muxes := 8     
+	   2 Input    8 Bit        Muxes := 63    
+	   4 Input    8 Bit        Muxes := 19    
+	   4 Input    6 Bit        Muxes := 4     
+	   2 Input    6 Bit        Muxes := 10    
+	   5 Input    6 Bit        Muxes := 1     
+	   8 Input    5 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 8     
+	   9 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 29    
+	   3 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 4     
+	  14 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 10    
+	   9 Input    3 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 2     
+	   8 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 6     
+	   2 Input    2 Bit        Muxes := 35    
+	   6 Input    2 Bit        Muxes := 1     
+	   8 Input    2 Bit        Muxes := 4     
+	   5 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 112   
+	   6 Input    1 Bit        Muxes := 7     
+	   9 Input    1 Bit        Muxes := 11    
+	   8 Input    1 Bit        Muxes := 3     
+	   7 Input    1 Bit        Muxes := 21    
+	   4 Input    1 Bit        Muxes := 14    
+	   5 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP pcm/right_scaled_r_reg, operation Mode is: (A*B)'.
+DSP Report: register pcm/right_scaled_r_reg is absorbed into DSP pcm/right_scaled_r_reg.
+DSP Report: operator pcm/right_scaled_r0 is absorbed into DSP pcm/right_scaled_r_reg.
+DSP Report: Generating DSP pcm/left_scaled_r_reg, operation Mode is: (A*B)'.
+DSP Report: register pcm/left_scaled_r_reg is absorbed into DSP pcm/left_scaled_r_reg.
+DSP Report: operator pcm/left_scaled_r0 is absorbed into DSP pcm/left_scaled_r_reg.
+WARNING: [Synth 8-3332] Sequential element (psg/FSM_onehot_state_r_reg[2]) is unused and will be removed from module audio.
+WARNING: [Synth 8-3332] Sequential element (psg/FSM_onehot_state_r_reg[1]) is unused and will be removed from module audio.
+WARNING: [Synth 8-3332] Sequential element (psg/FSM_onehot_state_r_reg[0]) is unused and will be removed from module audio.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1368.156 ; gain = 69.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++----------------+--------------------------------------+---------------+----------------+
+|Module Name     | RTL Object                           | Depth x Width | Implemented As | 
++----------------+--------------------------------------+---------------+----------------+
+|psg             | cur_volume_log                       | 64x6          | LUT            | 
+|video_composite | modulator/phase_accum_r_reg_rep_bsel | 512x8         | Block RAM      | 
+|video_composite | modulator/phase_accum_r_reg_rep_bsel | 512x8         | Block RAM      | 
+|audio           | psg/cur_volume_log                   | 64x6          | LUT            | 
++----------------+--------------------------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++-------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name              | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|vera0                    | l0_line_buffer/linebuf_a/mem_reg | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|vera0                    | l0_line_buffer/linebuf_b/mem_reg | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|vera0                    | l0_line_buffer/linebuf_c/mem_reg | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|vera0                    | l1_line_buffer/linebuf_a/mem_reg | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|vera0                    | l1_line_buffer/linebuf_b/mem_reg | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|vera0                    | l1_line_buffer/linebuf_c/mem_reg | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|vera0/sprite_line_buffer | linebuf_1a/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vera0/sprite_line_buffer | linebuf_1b/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vera0/sprite_line_buffer | linebuf_1c/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vera0/sprite_line_buffer | linebuf_1d/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vera0/sprite_line_buffer | linebuf_2a/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vera0/sprite_line_buffer | linebuf_2b/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vera0/sprite_line_buffer | linebuf_2c/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vera0/sprite_line_buffer | linebuf_2d/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++-------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|pcm         | (A*B)'      | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|pcm         | (A*B)'      | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 1    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1368.156 ; gain = 69.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1368.156 ; gain = 69.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name              | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|vera0                    | l0_line_buffer/linebuf_a/mem_reg | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|vera0                    | l0_line_buffer/linebuf_b/mem_reg | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|vera0                    | l0_line_buffer/linebuf_c/mem_reg | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|vera0                    | l1_line_buffer/linebuf_a/mem_reg | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|vera0                    | l1_line_buffer/linebuf_b/mem_reg | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|vera0                    | l1_line_buffer/linebuf_c/mem_reg | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|vera0/sprite_line_buffer | linebuf_1a/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vera0/sprite_line_buffer | linebuf_1b/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vera0/sprite_line_buffer | linebuf_1c/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vera0/sprite_line_buffer | linebuf_1d/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vera0/sprite_line_buffer | linebuf_2a/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vera0/sprite_line_buffer | linebuf_2b/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vera0/sprite_line_buffer | linebuf_2c/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vera0/sprite_line_buffer | linebuf_2d/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++-------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (MDAC0/FSM_sequential_mdac_state_reg[3]) is unused and will be removed from module MercuryII_Vera.
+WARNING: [Synth 8-3332] Sequential element (MDAC0/FSM_sequential_mdac_state_reg[2]) is unused and will be removed from module MercuryII_Vera.
+WARNING: [Synth 8-3332] Sequential element (MDAC0/FSM_sequential_mdac_state_reg[1]) is unused and will be removed from module MercuryII_Vera.
+WARNING: [Synth 8-3332] Sequential element (MDAC0/FSM_sequential_mdac_state_reg[0]) is unused and will be removed from module MercuryII_Vera.
+INFO: [Synth 8-7052] The timing for the instance vera0/l0_line_buffer/linebuf_a/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vera0/l0_line_buffer/linebuf_b/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vera0/l0_line_buffer/linebuf_c/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vera0/l1_line_buffer/linebuf_a/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vera0/l1_line_buffer/linebuf_b/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vera0/l1_line_buffer/linebuf_c/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vera0/sprite_line_buffer/linebuf_1a/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vera0/sprite_line_buffer/linebuf_1b/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vera0/sprite_line_buffer/linebuf_1c/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vera0/sprite_line_buffer/linebuf_1d/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vera0/sprite_line_buffer/linebuf_2a/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vera0/sprite_line_buffer/linebuf_2b/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vera0/sprite_line_buffer/linebuf_2c/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vera0/sprite_line_buffer/linebuf_2d/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1368.156 ; gain = 69.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1368.156 ; gain = 69.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1368.156 ; gain = 69.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1368.156 ; gain = 69.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1368.156 ; gain = 69.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1368.156 ; gain = 69.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1368.156 ; gain = 69.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++---------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name    | RTL Name                                    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|MercuryII_Vera | vera0/video_composite/modulator/luma_reg[4] | 3      | 4     | NO           | NO                 | YES               | 4      | 0       | 
++---------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
+|2     |sprite_ram    |         1|
+|3     |palette_ram   |         1|
+|4     |SP256K        |         4|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |SP256K      |     4|
+|5     |clk_wiz     |     1|
+|6     |palette_ram |     1|
+|7     |sprite_ram  |     1|
+|8     |BUFG        |     1|
+|9     |CARRY4      |   190|
+|10    |LUT1        |    64|
+|11    |LUT2        |   455|
+|12    |LUT3        |   454|
+|13    |LUT4        |   392|
+|14    |LUT5        |   515|
+|15    |LUT6        |   858|
+|16    |MUXF7       |    40|
+|17    |RAMB18E1    |    16|
+|20    |SRL16E      |     4|
+|21    |FDCE        |  1128|
+|22    |FDPE        |    21|
+|23    |FDRE        |   250|
+|24    |FDSE        |    17|
+|25    |IBUF        |    19|
+|26    |IOBUF       |     9|
+|27    |OBUF        |     7|
+|28    |OBUFDS      |     4|
+|29    |OBUFT       |    27|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1368.156 ; gain = 69.609
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 135 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1368.156 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1368.156 ; gain = 69.609
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1368.156 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 259 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1368.156 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 13 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 9 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 4 instances
+
+Synth Design complete, checksum: 3801281
+INFO: [Common 17-83] Releasing license: Synthesis
+118 Infos, 198 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1368.156 ; gain = 69.609
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/MercuryII_Vera.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file MercuryII_Vera_utilization_synth.rpt -pb MercuryII_Vera_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 20 12:13:58 2023...

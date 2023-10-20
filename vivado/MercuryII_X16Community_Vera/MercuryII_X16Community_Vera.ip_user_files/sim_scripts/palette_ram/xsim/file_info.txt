@@ -1,0 +1,2 @@
+palette_ram.v,verilog,xil_defaultlib,../../../../MercuryII_X16Community_Vera.gen/sources_1/ip/palette_ram/sim/palette_ram.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

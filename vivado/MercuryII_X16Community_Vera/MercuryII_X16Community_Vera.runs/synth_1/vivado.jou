@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Oct 20 12:13:20 2023
+# Process ID: 25176
+# Current directory: C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1
+# Command line: vivado.exe -log MercuryII_Vera.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MercuryII_Vera.tcl
+# Log file: C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/MercuryII_Vera.vds
+# Journal file: C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1\vivado.jou
+# Running On: DESKTOP-4FV4FV1, OS: Windows, CPU Frequency: 3610 MHz, CPU Physical cores: 12, Host memory: 34106 MB
+#-----------------------------------------------------------
+source MercuryII_Vera.tcl -notrace

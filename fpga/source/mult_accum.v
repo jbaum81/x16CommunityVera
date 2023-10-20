@@ -12,6 +12,7 @@ module mult_accum (
     
     output wire [31:0] output_32);
     
+    /*
     pmi_dsp i_mult16x16 ( // port interfaces
         .A(input_a_16),
         .B(input_b_16),
@@ -41,6 +42,7 @@ module mult_accum (
         .SIGNEXTIN(1'b0),
         .SIGNEXTOUT()
     );
+    
     defparam i_mult16x16.TOPOUTPUT_SELECT = 2'b00; // Adder output (non registered)
     defparam i_mult16x16.BOTOUTPUT_SELECT = 2'b00; // Adder output (non registered)
     defparam i_mult16x16.A_SIGNED = 1'b1; //Signed Inputs
@@ -52,6 +54,6 @@ module mult_accum (
     defparam i_mult16x16.TOPADDSUB_UPPERINPUT = 1'b0;  // We send the output of the top (output) flip-flop to the upper side of the top accumilator
     defparam i_mult16x16.BOTADDSUB_LOWERINPUT = 2'b10; // We send the output (the 16 lower bits) of the 16x16 multiplier to the lower side of the bottom accumilator
     defparam i_mult16x16.BOTADDSUB_UPPERINPUT = 1'b0;  // We send the output of the bottom (output) flip-flop to the upper side of the top accumilator
-    
+    */
     
 endmodule

@@ -17,7 +17,9 @@ module video_vga(
     output reg   [3:0] vga_g,
     output reg   [3:0] vga_b,
     output reg         vga_hsync,
-    output reg         vga_vsync);
+    output reg         vga_vsync,
+    //JB Surface Active signal for DVI
+    output reg         vga_active);
 
     assign next_pixel = 1'b1;
 
@@ -84,6 +86,8 @@ module video_vga(
             vga_b <= 4'd0;
             vga_hsync <= 1;
             vga_vsync <= 1;
+            //JB for DVI Signal
+            vga_active <= 0;
 
         end else begin
             if (active_r[1]) begin
@@ -98,6 +102,8 @@ module video_vga(
 
             vga_hsync <= ~hsync_r[1];
             vga_vsync <= ~vsync_r[1];
+            //JB for DVI Signal
+            vga_active <= active_r[1];
         end
     end
 

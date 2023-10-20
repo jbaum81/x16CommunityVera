@@ -105,6 +105,51 @@ module main_ram(
 
 `else
 
+    //JB - Begin Xilinx Block RAM IP (Artix Port)
+    wire [1:0] blk0we = (bus_write && blk10_cs) ? {bus_wrnibblesel[2], bus_wrnibblesel[0]} : 2'b00;
+    wire [1:0] blk1we = (bus_write && blk10_cs) ? {bus_wrnibblesel[6], bus_wrnibblesel[4]} : 2'b00;
+    wire [1:0] blk2we = (bus_write && blk32_cs) ? {bus_wrnibblesel[2], bus_wrnibblesel[0]} : 2'b00;
+    wire [1:0] blk3we = (bus_write && blk32_cs) ? {bus_wrnibblesel[6], bus_wrnibblesel[4]} : 2'b00;
+    
+    SP256K blk0 (
+      .clka(clk),    // input wire clka
+      .ena(1'b1),      // input wire ena
+      .wea(blk0we),      // input wire [1 : 0] wea
+      .addra(bus_addr[13:0]),  // input wire [13 : 0] addra
+      .dina(bus_wrdata[15:0]),    // input wire [15 : 0] dina
+      .douta(blk10_rddata[15:0])  // output wire [15 : 0] douta
+    );
+    
+    SP256K blk1 (
+      .clka(clk),    // input wire clka
+      .ena(1'b1),      // input wire ena
+      .wea(blk1we),      // input wire [1 : 0] wea
+      .addra(bus_addr[13:0]),  // input wire [13 : 0] addra
+      .dina(bus_wrdata[31:16]),    // input wire [15 : 0] dina
+      .douta(blk10_rddata[31:16])  // output wire [15 : 0] douta
+    );
+    
+    SP256K blk2 (
+      .clka(clk),    // input wire clka
+      .ena(1'b1),      // input wire ena
+      .wea(blk2we),      // input wire [1 : 0] wea
+      .addra(bus_addr[13:0]),  // input wire [13 : 0] addra
+      .dina(bus_wrdata[15:0]),    // input wire [15 : 0] dina
+      .douta(blk32_rddata[15:0])  // output wire [15 : 0] douta
+    );
+    
+    SP256K blk3 (
+      .clka(clk),    // input wire clka
+      .ena(1'b1),      // input wire ena
+      .wea(blk3we),      // input wire [1 : 0] wea
+      .addra(bus_addr[13:0]),  // input wire [13 : 0] addra
+      .dina(bus_wrdata[31:16]),    // input wire [15 : 0] dina
+      .douta(blk32_rddata[31:16])  // output wire [15 : 0] douta
+    );
+    
+    //JB - End Xilinx Block RAM IP (Artix Port)
+
+/* JB: disable Ice40 Block Ram (Artix Port)
     SP256K blk0(
         .CK(clk),
         .AD(bus_addr[13:0]),
@@ -152,6 +197,8 @@ module main_ram(
         .STDBY(1'b0),
         .SLEEP(1'b0),
         .PWROFF_N(1'b1));
+*/
+
 `endif
 
 endmodule

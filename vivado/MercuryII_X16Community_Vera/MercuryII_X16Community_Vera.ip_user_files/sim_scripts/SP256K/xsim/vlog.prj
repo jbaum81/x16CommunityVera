@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../MercuryII_X16Community_Vera.gen/sources_1/ip/SP256K/sim/SP256K.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

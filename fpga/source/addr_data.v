@@ -1115,7 +1115,7 @@ module addr_data(
     //////////////////////////////////////////////////////////////////////////
     // MULTIPLIER / ACCUMULATOR
     //////////////////////////////////////////////////////////////////////////
-    
+
     mult_accum mult_accum(
         .clk(clk),
         .input_a_16(ib_cache32_r[15:0]),
@@ -1126,5 +1126,5 @@ module addr_data(
         .add_or_sub(fx_add_or_sub_r),
         .output_32(ib_mult_accum_cache32)
     );
-    
+
 endmodule

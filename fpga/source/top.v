@@ -8,7 +8,10 @@ module top(
     input  wire       extbus_rd_n,   /* Read strobe */
     input  wire       extbus_wr_n,   /* Write strobe */
     input  wire [4:0] extbus_a,      /* Address */
-    inout  wire [7:0] extbus_d,      /* Data (bi-directional) */
+    //JB Breakout data in/out
+    //inout  wire [7:0] extbus_d,      /* Data (bi-directional) */
+    input  wire [7:0] extbus_d,      /* Data (bi-directional) */
+    output reg [7:0] rddata,
     output wire       extbus_irq_n,  /* IRQ */
 
     // VGA interface
@@ -17,6 +20,8 @@ module top(
     output reg  [3:0] vga_b       /* synthesis syn_useioff = 1 */,
     output reg        vga_hsync   /* synthesis syn_useioff = 1 */,
     output reg        vga_vsync   /* synthesis syn_useioff = 1 */,
+    //JB: Added for DVI Signal
+    output reg        vga_active,
 
     // SPI interface
     output wire       spi_sck,
@@ -27,7 +32,15 @@ module top(
     // Audio output
     output wire       audio_lrck,
     output wire       audio_bck,
-    output wire       audio_data);
+    output wire       audio_data,
+    
+    //JB Surfacing Audio signals for MercuryII DAC
+    output wire [23:0]  vera_audio_data_left,       // 2's complement signed left data
+    output wire [23:0]  vera_audio_data_right,      // 2's complement signed right data
+    output wire         vera_audio_next_sample,
+    //JB Add reset from system (Used primarily for power on reset. (Artix boots slower than ICE40)
+    input wire rst 
+    );
 
     //////////////////////////////////////////////////////////////////////////
     // Synchronize external asynchronous reset signal to clk25 domain
@@ -35,9 +48,14 @@ module top(
     reg [7:0] por_cnt_r = 0;
     always @(posedge clk25) if (!por_cnt_r[7]) por_cnt_r <= por_cnt_r + 8'd1;
 
+    //JB Adding system reset control. 
+    wire asyncReset = (!por_cnt_r[7] || !rst);
+
     wire reset;
     reset_sync reset_sync_clk25(
-        .async_rst_in(!por_cnt_r[7]),
+        //JB adding in System Reset signal
+        //.async_rst_in(!por_cnt_r[7]),
+        .async_rst_in(asyncReset),
         .clk(clk25),
         .reset_out(reset));
 
@@ -161,7 +179,7 @@ module top(
     wire       spi_busy;
     wire [7:0] spi_rxdata;
 
-    reg [7:0] rddata;
+    //reg [7:0] rddata;
     always @* case (extbus_a)
         5'h00: rddata = vram_addr_select_r ? vram_addr_1_r[7:0] : vram_addr_0_r[7:0];
         5'h01: rddata = vram_addr_select_r ? vram_addr_1_r[15:8] : vram_addr_0_r[15:8];
@@ -234,7 +252,8 @@ module top(
 
     wire bus_read  = !extbus_cs_n &&  extbus_wr_n && !extbus_rd_n;
     wire bus_write = !extbus_cs_n && !extbus_wr_n;
-    assign extbus_d = bus_read ? rddata : 8'bZ;
+    //JB Breakout data in/out. 
+    //assign extbus_d = bus_read ? rddata : 8'bZ;
 
     // Capture address / write-data at end of write cycle
     reg [4:0] rdaddr_r;
@@ -918,7 +937,22 @@ module top(
         3'd2: sprite_attr_bytesel = 4'b0100;
         3'd3: sprite_attr_bytesel = 4'b1000;
     endcase
+    
+    //JB - Begin Xilinx Block RAM IP (Artix Port)
+    sprite_ram sprite_attr_ram (
+      .clka(clk),    // input wire clka
+      .ena(sprite_attr_write),      // input wire ena
+      .wea(sprite_attr_bytesel),      // input wire [3 : 0] wea
+      .addra(sprite_attr_wraddr),  // input wire [7 : 0] addra
+      .dina(sprite_attr_wrdata),    // input wire [31 : 0] dina
+      .clkb(clk),    // input wire clkb
+      .enb(1'b1),      // input wire enb
+      .addrb(sprite_idx),  // input wire [7 : 0] addrb
+      .doutb(sprite_attr)  // output wire [31 : 0] doutb
+    );
+    //JB - End Xilinx Block RAM IP (Artix Port)
 
+/* JB: disable Ice40 Block Ram (Artix Port)
     sprite_ram sprite_attr_ram(
         .rst_i(1'b0),
         .wr_clk_i(clk),
@@ -932,7 +966,7 @@ module top(
         .wr_addr_i(sprite_attr_wraddr),
         .rd_addr_i(sprite_idx),
         .rd_data_o(sprite_attr));
-
+*/
     //////////////////////////////////////////////////////////////////////////
     // Composer
     //////////////////////////////////////////////////////////////////////////
@@ -990,8 +1024,21 @@ module top(
     wire  [1:0] palette_bytesel = ib_addr_r[0] ? 2'b10 : 2'b01;
     wire  [7:0] palette_wridx   = ib_addr_r[8:1];
     wire [15:0] palette_wrdata  = {2{ib_wrdata_r}};
+    
+    //JB - Begin Xilinx Block RAM IP (Artix Port)
+    palette_ram palette_ram (
+        .clka(clk),    // input wire clka
+        .ena(palette_write),      // input wire ena
+        .wea(palette_bytesel),      // input wire [1 : 0] wea
+        .addra(palette_wridx),  // input wire [7 : 0] addra
+        .dina(palette_wrdata),    // input wire [15 : 0] dina
+        .clkb(clk),    // input wire clkb
+        .addrb(composer_display_data),  // input wire [7 : 0] addrb
+        .doutb(palette_rgb_data)  // output wire [15 : 0] doutb
+    );
+    //JB - End Xilinx Block RAM IP (Artix Port)
 
-    palette_ram palette_ram(
+/* JB: disable Ice40 Block Ram (Artix Port)    palette_ram palette_ram(
         .rst_i(1'b0),
         .wr_clk_i(clk),
         .rd_clk_i(clk),
@@ -1004,7 +1051,7 @@ module top(
         .wr_addr_i(palette_wridx),
         .rd_addr_i(composer_display_data),
         .rd_data_o(palette_rgb_data));
-
+*/
     //////////////////////////////////////////////////////////////////////////
     // Composite video
     //////////////////////////////////////////////////////////////////////////
@@ -1056,6 +1103,9 @@ module top(
 
     wire [3:0] video_vga_r, video_vga_g, video_vga_b;
     wire       video_vga_hsync, video_vga_vsync;
+    
+    //JB Added for DVI Signal
+    wire       video_vga_active;
 
     video_vga video_vga(
         .rst(reset),
@@ -1074,7 +1124,9 @@ module top(
         .vga_g(video_vga_g),
         .vga_b(video_vga_b),
         .vga_hsync(video_vga_hsync),
-        .vga_vsync(video_vga_vsync));
+        .vga_vsync(video_vga_vsync),
+        //JB Added for DVI Signal
+        .vga_active(video_vga_active));
 
     //////////////////////////////////////////////////////////////////////////
     // Video output selection
@@ -1091,6 +1143,8 @@ module top(
             vga_b     <= video_vga_b;
             vga_hsync <= video_vga_hsync;
             vga_vsync <= video_vga_vsync;
+            //JB Added for DVI Signal
+            vga_active <= video_vga_active;
         end
 
         2'b10: begin
@@ -1099,6 +1153,10 @@ module top(
             vga_b     <= video_composite_chroma2[3:0];
             vga_hsync <= 0;
             vga_vsync <= 0;
+            //JB Added for DVI Signal
+            vga_active <= 0;
+            //JB Added for DVI Signal
+            vga_active <= 0;
         end
 
         2'b11: begin
@@ -1112,6 +1170,8 @@ module top(
                 vga_hsync <= video_rgb_sync_n;
                 vga_vsync <= 1'b0;
             end
+            //JB Added for DVI Signal
+            vga_active <= 0;
         end
 
         default: begin
@@ -1120,6 +1180,8 @@ module top(
             vga_b     <= 0;
             vga_hsync <= 0;
             vga_vsync <= 0;
+            //JB Added for DVI Signal
+            vga_active <= 0;
         end
     endcase
 
@@ -1127,10 +1189,13 @@ module top(
     // FPGA reconfiguration
     //////////////////////////////////////////////////////////////////////////
 `ifndef __ICARUS__
+
+    /* JB TODO: Unknown module 
     WARMBOOT warmboot(
         .S1(1'b0),
         .S0(1'b0),
         .BOOT(fpga_reconfigure_r));
+        */
 `endif
 
     //////////////////////////////////////////////////////////////////////////

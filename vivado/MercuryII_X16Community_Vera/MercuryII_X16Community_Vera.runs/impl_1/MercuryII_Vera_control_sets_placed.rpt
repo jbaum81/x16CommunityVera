@@ -1,0 +1,183 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Fri Oct 20 12:14:31 2023
+| Host         : DESKTOP-4FV4FV1 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file MercuryII_Vera_control_sets_placed.rpt
+| Design       : MercuryII_Vera
+| Device       : xc7a35t
+-------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   105 |
+|    Minimum number of control sets                        |   105 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   192 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   105 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |    18 |
+| >= 6 to < 8        |     7 |
+| >= 8 to < 10       |    44 |
+| >= 10 to < 12      |     6 |
+| >= 12 to < 14      |     3 |
+| >= 14 to < 16      |     7 |
+| >= 16              |    19 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             194 |           66 |
+| No           | No                    | Yes                    |             159 |           87 |
+| No           | Yes                   | No                     |              49 |           24 |
+| Yes          | No                    | No                     |               8 |            2 |
+| Yes          | No                    | Yes                    |             990 |          367 |
+| Yes          | Yes                   | No                     |              24 |            6 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------+-------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
+|          Clock Signal         |                     Enable Signal                     |                        Set/Reset Signal                       | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------+-------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
+|  mmcm0/inst/clk25             |                                                       | vera0/reset_sync_clk25/asyncReset                             |                1 |              2 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/l1_hscroll_r[11]_i_1_n_0                        | vera0/reset_sync_clk25/AR[0]                                  |                1 |              4 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/l0_vscroll_r[11]_i_1_n_0                        | vera0/reset_sync_clk25/AR[0]                                  |                1 |              4 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/l1_vscroll_r[11]_i_1_n_0                        | vera0/reset_sync_clk25/AR[0]                                  |                1 |              4 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/sprite_renderer/cur_collision_mask_r[3]_i_1_n_0 | vera0/reset_sync_clk25/AR[0]                                  |                3 |              4 |         1.33 |
+|  mmcm0/inst/hdmiClk           |                                                       | enc/TMDS_mod10[3]_i_1_n_0                                     |                1 |              4 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/video_composite/vblank_pulse                    | vera0/reset_sync_clk25/AR[0]                                  |                2 |              4 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/l0_hscroll_r[11]_i_1_n_0                        | vera0/reset_sync_clk25/AR[0]                                  |                2 |              4 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/ib_cache32_r[11]_i_1_n_0              | vera0/reset_sync_clk25/AR[0]                                  |                2 |              4 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/ib_cache32_r[27]_i_1_n_0              | vera0/reset_sync_clk25/AR[0]                                  |                1 |              4 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/ib_cache32_r[7]_i_1_n_0               | vera0/reset_sync_clk25/AR[0]                                  |                2 |              4 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/ib_cache32_r[3]_i_1_n_0               | vera0/reset_sync_clk25/AR[0]                                  |                1 |              4 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/ib_cache32_r[31]_i_1_n_0              | vera0/reset_sync_clk25/AR[0]                                  |                2 |              4 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/ib_cache32_r[19]_i_1_n_0              | vera0/reset_sync_clk25/AR[0]                                  |                1 |              4 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/ib_cache32_r[15]_i_1_n_0              | vera0/reset_sync_clk25/AR[0]                                  |                2 |              4 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/ib_cache32_r[23]_i_1_n_0              | vera0/reset_sync_clk25/AR[0]                                  |                1 |              4 |         4.00 |
+|  vera0/bus_write_r[0]_i_1_n_0 |                                                       |                                                               |                2 |              5 |         2.50 |
+|  vera0/rdaddr_r[4]_i_1_n_0    |                                                       |                                                               |                2 |              5 |         2.50 |
+|  mmcm0/inst/clk25             | vera0/irq_enable_audio_fifo_low_r0                    | vera0/reset_sync_clk25/AR[0]                                  |                2 |              5 |         2.50 |
+|  mmcm0/inst/clk25             | vera0/audio_mode_stereo_r0                            | vera0/reset_sync_clk25/AR[0]                                  |                2 |              6 |         3.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/vram_addr_1_next0                     | vera0/reset_sync_clk25/AR[0]                                  |                3 |              6 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/vram_addr_1_r[7]_i_1_n_0              | vera0/reset_sync_clk25/AR[0]                                  |                3 |              6 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/vram_addr_nib_incr_0_r_i_1_n_0        | vera0/reset_sync_clk25/AR[0]                                  |                2 |              6 |         3.00 |
+|  mmcm0/inst/clk25             | vera0/vram_addr_select_r0                             | vera0/reset_sync_clk25/AR[0]                                  |                2 |              7 |         3.50 |
+|  mmcm0/inst/clk25             | vera0/sprites_enabled_r0                              | vera0/reset_sync_clk25/AR[0]                                  |                2 |              7 |         3.50 |
+|  mmcm0/inst/clk25             | vera0/addr_data/fx_pixel_pos_x_r[16]_i_1_n_0          | vera0/reset_sync_clk25/AR[0]                                  |                2 |              7 |         3.50 |
+| ~vera0/bus_write_r[0]_i_1_n_0 |                                                       |                                                               |                2 |              8 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/l0_renderer/htile_cnt_r[7]_i_1_n_0              | vera0/reset_sync_clk25/AR[0]                                  |                3 |              8 |         2.67 |
+|  mmcm0/inst/clk25             | vera0/l1_renderer/htile_cnt_r[7]_i_1__0_n_0           | vera0/reset_sync_clk25/AR[0]                                  |                2 |              8 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/spictrl/rx_shift_r                              | vera0/reset_sync_clk25/AR[0]                                  |                4 |              8 |         2.00 |
+|  mmcm0/inst/clk25             |                                                       | vera0/video_composite/modulator/vcnt_reg[9]                   |                5 |              8 |         1.60 |
+|  mmcm0/inst/clk25             | vera0/sprite_line_buffer/composer_wr_en_i_1_n_0       | vera0/reset_sync_clk25/AR[0]                                  |                3 |              8 |         2.67 |
+|  mmcm0/inst/clk25             | vera0/addr_data/vram_addr_0_r[7]_i_1_n_0              | vera0/reset_sync_clk25/AR[0]                                  |                2 |              8 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/p_2_in53_out                          | vera0/reset_sync_clk25/AR[0]                                  |                2 |              8 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/vram_addr_0_r[15]_i_1_n_0             | vera0/reset_sync_clk25/AR[0]                                  |                3 |              8 |         2.67 |
+|  mmcm0/inst/clk25             | vera0/addr_data/p_71_in                               | vera0/reset_sync_clk25/AR[0]                                  |                2 |              8 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/vram_addr_1_r[15]_i_1_n_0             | vera0/reset_sync_clk25/AR[0]                                  |                4 |              8 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/vram_data1_r0                         | vera0/reset_sync_clk25/AR[0]                                  |                3 |              8 |         2.67 |
+|  mmcm0/inst/clk25             | vera0/addr_data/vram_data0_r0                         | vera0/reset_sync_clk25/AR[0]                                  |                2 |              8 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/p_7_out[8]                            | vera0/reset_sync_clk25/AR[0]                                  |                3 |              8 |         2.67 |
+|  mmcm0/inst/clk25             | vera0/addr_data/p_6_out[11]                           | vera0/reset_sync_clk25/AR[0]                                  |                2 |              8 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/p_6_out[8]                            | vera0/reset_sync_clk25/AR[0]                                  |                3 |              8 |         2.67 |
+|  mmcm0/inst/clk25             | vera0/audio/dacif/E[0]                                | vera0/reset_sync_clk25/AR[0]                                  |                2 |              8 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/fx_2bit_poke_mode_next148_out         | vera0/reset_sync_clk25/AR[0]                                  |                4 |              8 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/fx_addr1_mode_r0                      | vera0/reset_sync_clk25/AR[0]                                  |                2 |              8 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/fx_map_base_address_r0                | vera0/reset_sync_clk25/AR[0]                                  |                4 |              8 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/fx_pixel_incr_y_r[7]_i_1_n_0          | vera0/reset_sync_clk25/AR[0]                                  |                3 |              8 |         2.67 |
+|  mmcm0/inst/clk25             | vera0/addr_data/fx_pixel_incr_x_r[7]_i_1_n_0          | vera0/reset_sync_clk25/AR[0]                                  |                2 |              8 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/addr_data/fx_tiledata_base_address_r0           | vera0/reset_sync_clk25/AR[0]                                  |                5 |              8 |         1.60 |
+|  mmcm0/inst/clk25             | vera0/audio_pcm_sample_rate_r0                        | vera0/reset_sync_clk25/AR[0]                                  |                4 |              8 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/dc_vscale_r0                                    | vera0/reset_sync_clk25/AR[0]                                  |                4 |              8 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/dc_border_color_r0                              | vera0/reset_sync_clk25/AR[0]                                  |                2 |              8 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/dc_active_vstart_r0                             | vera0/reset_sync_clk25/AR[0]                                  |                2 |              8 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/dc_active_hstart_r0                             | vera0/reset_sync_clk25/AR[0]                                  |                3 |              8 |         2.67 |
+|  mmcm0/inst/clk25             | vera0/dc_hscale_r0                                    | vera0/reset_sync_clk25/AR[0]                                  |                2 |              8 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/l0_hscroll_r[7]_i_1_n_0                         | vera0/reset_sync_clk25/AR[0]                                  |                3 |              8 |         2.67 |
+|  mmcm0/inst/clk25             | vera0/dc_active_vstop_r0                              | vera0/reset_sync_clk25/AR[0]                                  |                3 |              8 |         2.67 |
+|  mmcm0/inst/clk25             | vera0/l0_color_depth_r0                               | vera0/reset_sync_clk25/AR[0]                                  |                5 |              8 |         1.60 |
+|  mmcm0/inst/clk25             | vera0/irq_line_r[7]_i_1_n_0                           | vera0/reset_sync_clk25/AR[0]                                  |                3 |              8 |         2.67 |
+|  mmcm0/inst/clk25             | vera0/dc_active_hstop_r0                              | vera0/reset_sync_clk25/AR[0]                                  |                2 |              8 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/l0_map_baseaddr_r0                              | vera0/reset_sync_clk25/AR[0]                                  |                3 |              8 |         2.67 |
+|  mmcm0/inst/clk25             | vera0/l0_tile_height_r0                               | vera0/reset_sync_clk25/AR[0]                                  |                4 |              8 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/l1_color_depth_r0                               | vera0/reset_sync_clk25/AR[0]                                  |                4 |              8 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/l1_tile_height_r0                               | vera0/reset_sync_clk25/AR[0]                                  |                4 |              8 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/l1_hscroll_r[7]_i_1_n_0                         | vera0/reset_sync_clk25/AR[0]                                  |                3 |              8 |         2.67 |
+|  mmcm0/inst/clk25             | vera0/l0_vscroll_r[7]_i_1_n_0                         | vera0/reset_sync_clk25/AR[0]                                  |                2 |              8 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/l1_map_baseaddr_r0                              | vera0/reset_sync_clk25/AR[0]                                  |                4 |              8 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/l1_vscroll_r[7]_i_1_n_0                         | vera0/reset_sync_clk25/AR[0]                                  |                3 |              8 |         2.67 |
+|  mmcm0/inst/clk25             | vera0/sel                                             |                                                               |                2 |              8 |         4.00 |
+|  mmcm0/inst/clk25             |                                                       | vera0/video_composite/modulator/chroma_s[-1111111104]_i_1_n_0 |                6 |              9 |         1.50 |
+|  mmcm0/inst/clk25             | vera0/video_composite/next_frame_r_reg_0[0]           | vera0/reset_sync_clk25/AR[0]                                  |                3 |             10 |         3.33 |
+|  mmcm0/inst/clk25             | vera0/video_vga/video_vga_next_line                   | vera0/reset_sync_clk25/AR[0]                                  |                3 |             10 |         3.33 |
+|  mmcm0/inst/clk25             | vera0/composer/E[0]                                   | vera0/reset_sync_clk25/AR[0]                                  |                5 |             10 |         2.00 |
+|  mmcm0/inst/clk25             | vera0/video_composite/h_half_line_last                | vera0/reset_sync_clk25/AR[0]                                  |                4 |             11 |         2.75 |
+|  mmcm0/inst/clk25             | vera0/video_composite/next_line                       | vera0/reset_sync_clk25/AR[0]                                  |                7 |             11 |         1.57 |
+|  mmcm0/inst/clk25             | vera0/video_composite/video_output_mode_r_reg[1][0]   | vera0/reset_sync_clk25/AR[0]                                  |                3 |             11 |         3.67 |
+|  mmcm0/inst/clk25             | vera0/audio/pcm/audio_fifo/wridx_r0                   | vera0/reset_sync_clk25/audio_fifo_reset                       |                3 |             12 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/audio/pcm/audio_fifo/rdidx_r0                   | vera0/reset_sync_clk25/audio_fifo_reset                       |                3 |             12 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/spictrl/bitcnt_r                                | vera0/reset_sync_clk25/AR[0]                                  |                4 |             12 |         3.00 |
+|  mmcm0/inst/clk25             | vera0/l1_renderer/bitmap_addr_r                       | vera0/reset_sync_clk25/AR[0]                                  |                4 |             15 |         3.75 |
+|  mmcm0/inst/clk25             | vera0/sprite_renderer/bus_addr_r[14]_i_1_n_0          | vera0/reset_sync_clk25/AR[0]                                  |                5 |             15 |         3.00 |
+|  mmcm0/inst/clk25             | vera0/l1_renderer/bus_addr[14]_i_1__0_n_0             | vera0/reset_sync_clk25/AR[0]                                  |                6 |             15 |         2.50 |
+|  mmcm0/inst/clk25             | vera0/l0_renderer/bitmap_addr_r                       | vera0/reset_sync_clk25/AR[0]                                  |                4 |             15 |         3.75 |
+|  mmcm0/inst/clk25             | vera0/l0_renderer/bus_addr[14]_i_1_n_0                | vera0/reset_sync_clk25/AR[0]                                  |                7 |             15 |         2.14 |
+|  mmcm0/inst/clk25             | vera0/l0_renderer/lb_wridx_next                       | vera0/reset_sync_clk25/AR[0]                                  |                7 |             15 |         2.14 |
+|  mmcm0/inst/clk25             | vera0/l1_renderer/lb_wridx_next                       | vera0/reset_sync_clk25/AR[0]                                  |                5 |             15 |         3.00 |
+|  mmcm0/inst/clk25             | vera0/composer/render_start_r0_out                    | vera0/reset_sync_clk25/AR[0]                                  |                4 |             16 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/composer/scaled_x_counter_r[0]_i_1_n_0          | vera0/reset_sync_clk25/AR[0]                                  |                5 |             17 |         3.40 |
+|  mmcm0/inst/clk25             | vera0/addr_data/ib_do_access_next                     | vera0/reset_sync_clk25/AR[0]                                  |               10 |             17 |         1.70 |
+|  mmcm0/inst/clk25             | vera0/l0_renderer/linebuf_wren_next                   | vera0/reset_sync_clk25/AR[0]                                  |               11 |             18 |         1.64 |
+|  mmcm0/inst/clk25             | vera0/l1_renderer/linebuf_wren_next                   | vera0/reset_sync_clk25/AR[0]                                  |                7 |             18 |         2.57 |
+|  mmcm0/inst/clk25             | vera0/sprite_renderer/save_hi                         | vera0/reset_sync_clk25/AR[0]                                  |                8 |             19 |         2.38 |
+|  mmcm0/inst/clk25             | vera0/sprite_renderer/save_lo                         | vera0/reset_sync_clk25/AR[0]                                  |                8 |             23 |         2.88 |
+|  sclk_IBUF_BUFG               |                                                       |                                                               |                7 |             25 |         3.57 |
+|  mmcm0/inst/clk25             |                                                       | enc/encode_R/_de_reg                                          |               12 |             28 |         2.33 |
+|  mmcm0/inst/hdmiClk           |                                                       |                                                               |                7 |             31 |         4.43 |
+|  mmcm0/inst/clk25             | vera0/l0_renderer/map_data_r[31]_i_1_n_0              | vera0/reset_sync_clk25/AR[0]                                  |                9 |             32 |         3.56 |
+|  mmcm0/inst/clk25             | vera0/l1_renderer/map_data_r[31]_i_1__0_n_0           | vera0/reset_sync_clk25/AR[0]                                  |                9 |             32 |         3.56 |
+|  mmcm0/inst/clk25             | vera0/sprite_renderer/render_data_r[31]_i_1__1_n_0    | vera0/reset_sync_clk25/AR[0]                                  |                9 |             32 |         3.56 |
+|  mmcm0/inst/clk25             | vera0/l1_renderer/next_render_mapdata_r[7]_i_1__0_n_0 | vera0/reset_sync_clk25/AR[0]                                  |               12 |             40 |         3.33 |
+|  mmcm0/inst/clk25             | vera0/l0_renderer/next_render_mapdata_r[7]_i_1_n_0    | vera0/reset_sync_clk25/AR[0]                                  |               10 |             40 |         4.00 |
+|  mmcm0/inst/clk25             | vera0/l1_renderer/render_start_i_1__0_n_0             | vera0/reset_sync_clk25/AR[0]                                  |               21 |             40 |         1.90 |
+|  mmcm0/inst/clk25             | vera0/l0_renderer/render_start_i_1_n_0                | vera0/reset_sync_clk25/AR[0]                                  |               17 |             40 |         2.35 |
+|  mmcm0/inst/clk25             |                                                       |                                                               |               46 |            124 |         2.70 |
+|  mmcm0/inst/clk25             |                                                       | vera0/reset_sync_clk25/AR[0]                                  |               86 |            157 |         1.83 |
++-------------------------------+-------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
+
+

@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../MercuryII_X16Community_Vera.gen/sources_1/ip/sprite_ram/sim/sprite_ram.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
