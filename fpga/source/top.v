@@ -4,7 +4,8 @@ module top(
     input  wire       clk25,
 
     // External bus interface
-    input  wire       extbus_cs_n,   /* Chip select */
+    //JB Disable extbus_cs_n input signal for VGA Active for DVI Video. 
+	//input  wire       extbus_cs_n,   /* Chip select */
     input  wire       extbus_rd_n,   /* Read strobe */
     input  wire       extbus_wr_n,   /* Write strobe */
     input  wire [4:0] extbus_a,      /* Address */
@@ -17,6 +18,8 @@ module top(
     output reg  [3:0] vga_b       /* synthesis syn_useioff = 1 */,
     output reg        vga_hsync   /* synthesis syn_useioff = 1 */,
     output reg        vga_vsync   /* synthesis syn_useioff = 1 */,
+	//JB: Added for DVI Signal
+    output reg        vga_active,
 
     // SPI interface
     output wire       spi_sck,
@@ -28,6 +31,10 @@ module top(
     output wire       audio_lrck,
     output wire       audio_bck,
     output wire       audio_data);
+	
+	//JB extbus_cs_n input signal removed for vga_active signal rd_n and wr_n now externally controlled 
+	//and only active when vera is selected. 
+	wire extbus_cs_n = !(!extbus_rd_n || !extbus_wr_n);
 
     //////////////////////////////////////////////////////////////////////////
     // Synchronize external asynchronous reset signal to clk25 domain
@@ -1074,7 +1081,9 @@ module top(
         .vga_g(video_vga_g),
         .vga_b(video_vga_b),
         .vga_hsync(video_vga_hsync),
-        .vga_vsync(video_vga_vsync));
+        .vga_vsync(video_vga_vsync),
+		//JB Added for DVI Signal
+        .vga_active(video_vga_active));
 
     //////////////////////////////////////////////////////////////////////////
     // Video output selection
@@ -1091,6 +1100,8 @@ module top(
             vga_b     <= video_vga_b;
             vga_hsync <= video_vga_hsync;
             vga_vsync <= video_vga_vsync;
+			//JB Added for DVI Signal
+            vga_active <= video_vga_active;
         end
 
         2'b10: begin
@@ -1099,6 +1110,8 @@ module top(
             vga_b     <= video_composite_chroma2[3:0];
             vga_hsync <= 0;
             vga_vsync <= 0;
+			//JB Added for DVI Signal
+            vga_active <= 0;
         end
 
         2'b11: begin
@@ -1112,6 +1125,8 @@ module top(
                 vga_hsync <= video_rgb_sync_n;
                 vga_vsync <= 1'b0;
             end
+			//JB Added for DVI Signal
+            vga_active <= 0;
         end
 
         default: begin
@@ -1120,6 +1135,8 @@ module top(
             vga_b     <= 0;
             vga_hsync <= 0;
             vga_vsync <= 0;
+			//JB Added for DVI Signal
+            vga_active <= 0;
         end
     endcase
 
