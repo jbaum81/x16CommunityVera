@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tftg256-1" LaunchTime="1697829198">
+<GenRun Id="impl_1" LaunchPart="xc7a35tftg256-1" LaunchTime="1698259236">
   <File Type="ROUTE-PWR" Name="MercuryII_Vera_power_routed.rpt"/>
   <File Type="PA-TCL" Name="MercuryII_Vera.tcl"/>
   <File Type="BITSTR-MMI" Name="MercuryII_Vera.mmi"/>
@@ -158,6 +158,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../fpga/source/mult_accum.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../fpga/source/audio/pcm.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -265,14 +272,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/MercuryII_Vera.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../fpga/source/mult_accum.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

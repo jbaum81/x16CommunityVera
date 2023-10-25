@@ -1251,8 +1251,13 @@ module top(
         // I2S audio output
         .i2s_lrck(audio_lrck),
         .i2s_bck(audio_bck),
-        .i2s_data(audio_data));
-
+        .i2s_data(audio_data),
+        
+        //JB surface audio signals for MercuryII DAC
+        .next_sample(vera_audio_next_sample),
+        .left_data(vera_audio_data_left),
+        .right_data(vera_audio_data_right)
+        );
 
     //////////////////////////////////////////////////////////////////////////
     // IRQ

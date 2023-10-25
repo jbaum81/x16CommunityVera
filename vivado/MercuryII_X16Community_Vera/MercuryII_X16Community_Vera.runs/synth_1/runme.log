@@ -22,22 +22,81 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10708
+INFO: [Synth 8-7075] Helper process launched with PID 27160
+WARNING: [Synth 8-6901] identifier 'accumulator' is used before its declaration [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:18]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1298.547 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1300.195 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'MercuryII_Vera' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/MercuryII_Vera.v:23]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-25176-DESKTOP-4FV4FV1/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-25176-DESKTOP-4FV4FV1/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-31232-DESKTOP-4FV4FV1/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-31232-DESKTOP-4FV4FV1/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:3]
 INFO: [Synth 8-6157] synthesizing module 'reset_sync' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/reset_sync.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'reset_sync' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/reset_sync.v:3]
 INFO: [Synth 8-6157] synthesizing module 'addr_data' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/addr_data.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mult_accum' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:3]
+INFO: [Synth 8-6157] synthesizing module 'DSP48E1' [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:26576]
+	Parameter ACASCREG bound to: 0 - type: integer 
+	Parameter ALUMODEREG bound to: 0 - type: integer 
+	Parameter AREG bound to: 0 - type: integer 
+	Parameter A_INPUT bound to: DIRECT - type: string 
+	Parameter BCASCREG bound to: 0 - type: integer 
+	Parameter BREG bound to: 0 - type: integer 
+	Parameter B_INPUT bound to: DIRECT - type: string 
+	Parameter CREG bound to: 0 - type: integer 
+	Parameter INMODEREG bound to: 0 - type: integer 
+	Parameter MREG bound to: 0 - type: integer 
+	Parameter OPMODEREG bound to: 0 - type: integer 
+	Parameter PREG bound to: 0 - type: integer 
+	Parameter USE_DPORT bound to: FALSE - type: string 
+	Parameter USE_MULT bound to: MULTIPLY - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'DSP48E1' (0#1) [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:26576]
+WARNING: [Synth 8-7071] port 'ACOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'BCOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'CARRYCASCOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'CARRYOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'MULTSIGNOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'OVERFLOW' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'PATTERNBDETECT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'PATTERNDETECT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'PCOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'UNDERFLOW' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'ACIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'BCIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'CARRYCASCIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'CEA1' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'CEA2' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'CEAD' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'CEALUMODE' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'CEB1' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'CEB2' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'CEC' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'CECARRYIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'CECTRL' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'CED' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'CEINMODE' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'CEM' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'CEP' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'D' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'MULTSIGNIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'PCIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'RSTA' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'RSTALLCARRYIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'RSTALUMODE' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'RSTB' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'RSTC' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'RSTCTRL' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'RSTD' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'RSTINMODE' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'RSTM' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7071] port 'RSTP' of module 'DSP48E1' is unconnected for instance 'DSP48E1_inst' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+WARNING: [Synth 8-7023] instance 'DSP48E1_inst' of module 'DSP48E1' has 49 connections declared, but only 10 given [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'mult_accum' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'addr_data' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/addr_data.v:3]
 INFO: [Synth 8-6157] synthesizing module 'vram_if' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/vram_if.v:3]
 INFO: [Synth 8-6157] synthesizing module 'main_ram' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/main_ram.v:3]
-INFO: [Synth 8-6157] synthesizing module 'SP256K' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-25176-DESKTOP-4FV4FV1/realtime/SP256K_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'SP256K' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-25176-DESKTOP-4FV4FV1/realtime/SP256K_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'SP256K' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-31232-DESKTOP-4FV4FV1/realtime/SP256K_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'SP256K' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-31232-DESKTOP-4FV4FV1/realtime/SP256K_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'main_ram' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/main_ram.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'vram_if' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/vram_if.v:3]
 INFO: [Synth 8-6157] synthesizing module 'layer_renderer' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/layer_renderer.v:3]
@@ -58,15 +117,94 @@ INFO: [Synth 8-6157] synthesizing module 'dpram__parameterized0' [C:/Users/Jason
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'dpram__parameterized0' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/dpram.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'sprite_line_buffer' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/sprite_line_buffer.v:3]
-INFO: [Synth 8-6157] synthesizing module 'sprite_ram' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-25176-DESKTOP-4FV4FV1/realtime/sprite_ram_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'sprite_ram' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-25176-DESKTOP-4FV4FV1/realtime/sprite_ram_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'sprite_ram' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-31232-DESKTOP-4FV4FV1/realtime/sprite_ram_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'sprite_ram' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-31232-DESKTOP-4FV4FV1/realtime/sprite_ram_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'composer' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/composer.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'composer' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/composer.v:3]
-INFO: [Synth 8-6157] synthesizing module 'palette_ram' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-25176-DESKTOP-4FV4FV1/realtime/palette_ram_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'palette_ram' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-25176-DESKTOP-4FV4FV1/realtime/palette_ram_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'palette_ram' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-31232-DESKTOP-4FV4FV1/realtime/palette_ram_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'palette_ram' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/.Xil/Vivado-31232-DESKTOP-4FV4FV1/realtime/palette_ram_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'video_composite' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_composite.v:3]
 INFO: [Synth 8-6157] synthesizing module 'video_modulator' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator.v:3]
 INFO: [Synth 8-6157] synthesizing module 'video_modulator_mult_u8xu8_pair' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:3]
+INFO: [Synth 8-6157] synthesizing module 'DSP48E1__parameterized0' [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:26576]
+	Parameter ACASCREG bound to: 0 - type: integer 
+	Parameter ALUMODEREG bound to: 0 - type: integer 
+	Parameter AREG bound to: 0 - type: integer 
+	Parameter A_INPUT bound to: DIRECT - type: string 
+	Parameter BCASCREG bound to: 0 - type: integer 
+	Parameter BREG bound to: 0 - type: integer 
+	Parameter B_INPUT bound to: DIRECT - type: string 
+	Parameter INMODEREG bound to: 0 - type: integer 
+	Parameter MREG bound to: 0 - type: integer 
+	Parameter OPMODEREG bound to: 0 - type: integer 
+	Parameter PREG bound to: 0 - type: integer 
+	Parameter USE_DPORT bound to: FALSE - type: string 
+	Parameter USE_MULT bound to: MULTIPLY - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'DSP48E1__parameterized0' (0#1) [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:26576]
+WARNING: [Synth 8-7071] port 'ACOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'BCOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'CARRYCASCOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'CARRYOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'MULTSIGNOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'OVERFLOW' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'PATTERNBDETECT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'PATTERNDETECT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'PCOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'UNDERFLOW' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'ACIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'BCIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'C' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'CARRYCASCIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'CARRYIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'CEA1' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'CEA2' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'CEAD' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'CEALUMODE' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'CEB1' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'CEB2' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'CEC' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'CECARRYIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'CECTRL' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'CED' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'CEINMODE' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'CEM' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'CEP' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'D' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'MULTSIGNIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'PCIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'RSTA' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'RSTALLCARRYIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'RSTALUMODE' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'RSTB' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'RSTC' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'RSTCTRL' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'RSTD' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'RSTINMODE' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'RSTM' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'RSTP' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8Low' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7023] instance 'DSP48E1_8x8Low' of module 'DSP48E1' has 49 connections declared, but only 8 given [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:39]
+WARNING: [Synth 8-7071] port 'ACOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'BCOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'CARRYCASCOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'CARRYOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'MULTSIGNOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'OVERFLOW' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'PATTERNBDETECT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'PATTERNDETECT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'PCOUT' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'UNDERFLOW' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'ACIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'BCIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'C' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'CARRYCASCIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'CARRYIN' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'CEA1' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'CEA2' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'CEAD' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'CEALUMODE' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+WARNING: [Synth 8-7071] port 'CEB1' of module 'DSP48E1' is unconnected for instance 'DSP48E1_8x8High' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
+INFO: [Common 17-14] Message 'Synth 8-7071' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7023] instance 'DSP48E1_8x8High' of module 'DSP48E1' has 49 connections declared, but only 8 given [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:65]
 INFO: [Synth 8-6155] done synthesizing module 'video_modulator_mult_u8xu8_pair' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:3]
 INFO: [Synth 8-6157] synthesizing module 'video_modulator_sinlut' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_sinlut.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'video_modulator_sinlut' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_sinlut.v:3]
@@ -98,10 +236,6 @@ INFO: [Synth 8-6155] done synthesizing module 'pcm' (0#1) [C:/Users/Jason/Develo
 INFO: [Synth 8-6157] synthesizing module 'dacif' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/dacif.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'dacif' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/dacif.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'audio' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/audio.v:3]
-WARNING: [Synth 8-7071] port 'next_sample' of module 'audio' is unconnected for instance 'audio' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:1228]
-WARNING: [Synth 8-7071] port 'left_data' of module 'audio' is unconnected for instance 'audio' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:1228]
-WARNING: [Synth 8-7071] port 'right_data' of module 'audio' is unconnected for instance 'audio' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:1228]
-WARNING: [Synth 8-7023] instance 'audio' of module 'audio' has 21 connections declared, but only 18 given [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:1228]
 INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:3]
 INFO: [Synth 8-6157] synthesizing module 'hdmiEncoder' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/hdmiEncoder.v:23]
 INFO: [Synth 8-6157] synthesizing module 'tmdsEncoder' [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/tmdsEncoder.v:23]
@@ -113,17 +247,8 @@ INFO: [Synth 8-6157] synthesizing module 'MercuryIIDAC' [C:/Users/Jason/Developm
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/MercuryIIDAC.v:61]
 INFO: [Synth 8-6155] done synthesizing module 'MercuryIIDAC' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/MercuryIIDAC.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'MercuryII_Vera' (0#1) [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/MercuryII_Vera.v:23]
-WARNING: [Synth 8-6014] Unused sequential element fx_mult_enabled_r_reg was removed.  [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/addr_data.v:988]
-WARNING: [Synth 8-6014] Unused sequential element fx_reset_accum_r_reg was removed.  [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/addr_data.v:989]
-WARNING: [Synth 8-6014] Unused sequential element fx_accumulate_r_reg was removed.  [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/addr_data.v:990]
-WARNING: [Synth 8-6014] Unused sequential element fx_add_or_sub_r_reg was removed.  [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/addr_data.v:991]
-WARNING: [Synth 8-3848] Net ib_mult_accum_cache32 in module/entity addr_data does not have driver. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/addr_data.v:35]
-WARNING: [Synth 8-3848] Net output_32 in module/entity video_modulator_mult_u8xu8_pair does not have driver. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/video/video_modulator_mult_u8xu8_pair.v:14]
 WARNING: [Synth 8-7137] Register sr_accum7_r_reg in module pcm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/pcm.v:66]
 WARNING: [Synth 8-6014] Unused sequential element fpga_reconfigure_r_reg was removed.  [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:510]
-WARNING: [Synth 8-3848] Net vera_audio_data_left in module/entity top does not have driver. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:38]
-WARNING: [Synth 8-3848] Net vera_audio_data_right in module/entity top does not have driver. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:39]
-WARNING: [Synth 8-3848] Net vera_audio_next_sample in module/entity top does not have driver. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/top.v:40]
 WARNING: [Synth 8-3848] Net led in module/entity MercuryII_Vera does not have driver. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/MercuryII_Vera.v:51]
 WARNING: [Synth 8-3848] Net sram_a in module/entity MercuryII_Vera does not have driver. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/MercuryII_Vera.v:55]
 WARNING: [Synth 8-3848] Net sram_wen in module/entity MercuryII_Vera does not have driver. [C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/sources_1/new/MercuryII_Vera.v:57]
@@ -152,71 +277,6 @@ WARNING: [Synth 8-7129] Port vera_audio_data_right[3] in module MercuryIIDAC is 
 WARNING: [Synth 8-7129] Port vera_audio_data_right[2] in module MercuryIIDAC is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vera_audio_data_right[1] in module MercuryIIDAC is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vera_audio_data_right[0] in module MercuryIIDAC is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_1_16[15] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_1_16[14] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_1_16[13] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_1_16[12] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_1_16[11] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_1_16[10] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_1_16[9] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_1_16[8] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_1_16[7] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_1_16[6] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_1_16[5] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_1_16[4] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_1_16[3] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_1_16[2] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_1_16[1] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_1_16[0] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_2_16[15] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_2_16[14] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_2_16[13] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_2_16[12] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_2_16[11] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_2_16[10] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_2_16[9] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_2_16[8] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_2_16[7] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_2_16[6] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_2_16[5] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_2_16[4] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_2_16[3] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_2_16[2] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_2_16[1] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port output_2_16[0] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port clk in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_1a_8[7] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_1a_8[6] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_1a_8[5] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_1a_8[4] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_1a_8[3] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_1a_8[2] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_1a_8[1] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_1a_8[0] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_1b_8[7] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_1b_8[6] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_1b_8[5] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_1b_8[4] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_1b_8[3] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_1b_8[2] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_1b_8[1] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_1b_8[0] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_2a_8[7] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_2a_8[6] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_2a_8[5] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_2a_8[4] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_2a_8[3] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_2a_8[2] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_2a_8[1] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_2a_8[0] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_2b_8[7] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_2b_8[6] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_2b_8[5] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_2b_8[4] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_2b_8[3] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_2b_8[2] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_2b_8[1] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
-WARNING: [Synth 8-7129] Port input_2b_8[0] in module video_modulator_mult_u8xu8_pair is either unconnected or has no load
 WARNING: [Synth 8-7129] Port sprite_lb_rddata[15] in module composer is either unconnected or has no load
 WARNING: [Synth 8-7129] Port sprite_lb_rddata[14] in module composer is either unconnected or has no load
 WARNING: [Synth 8-7129] Port sprite_lb_rddata[13] in module composer is either unconnected or has no load
@@ -228,21 +288,60 @@ WARNING: [Synth 8-7129] Port sprite_attr[13] in module sprite_renderer is either
 WARNING: [Synth 8-7129] Port sprite_attr[12] in module sprite_renderer is either unconnected or has no load
 WARNING: [Synth 8-7129] Port linebuf_rddata[11] in module sprite_renderer is either unconnected or has no load
 WARNING: [Synth 8-7129] Port linebuf_rddata[10] in module sprite_renderer is either unconnected or has no load
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7129] Port rst in module layer_line_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus_wrnibblesel[7] in module main_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus_wrnibblesel[5] in module main_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus_wrnibblesel[3] in module main_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus_wrnibblesel[1] in module main_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[2] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[1] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[0] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[20] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[19] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[18] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[17] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[16] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[15] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[14] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[13] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[12] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[11] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[10] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[9] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[8] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[7] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[6] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[5] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[4] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[3] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[2] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[1] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[0] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_wen in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_cen in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port datDir in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_d[7] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_d[6] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_d[5] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_d[4] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_d[3] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_d[2] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_d[1] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_d[0] in module MercuryII_Vera is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1298.547 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1300.195 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1298.547 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1300.195 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1298.547 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1300.195 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1298.547 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1300.195 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -344,23 +443,23 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/MercuryII_Vera_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1368.156 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1309.102 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 4 instances were transformed.
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1368.156 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1309.102 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1368.156 ; gain = 69.609
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1309.102 ; gain = 8.906
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tftg256-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1368.156 ; gain = 69.609
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1309.102 ; gain = 8.906
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -375,10 +474,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for vera0/vram_if/main_ram/blk1. (con
 Applied set_property KEEP_HIERARCHY = SOFT for vera0/vram_if/main_ram/blk2. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for vera0/vram_if/main_ram/blk3. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1368.156 ; gain = 69.609
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1309.102 ; gain = 8.906
 ---------------------------------------------------------------------------------
-DSP Debug: swapped A/B pins for adder 00000141DE898B60
-DSP Debug: swapped A/B pins for adder 00000141DE899E20
+DSP Debug: swapped A/B pins for adder 0000022B3E7EBC80
+DSP Debug: swapped A/B pins for adder 0000022B3E7EBDA0
 INFO: [Synth 8-802] inferred FSM for state register 'state_r_reg' in module 'psg'
 INFO: [Synth 8-802] inferred FSM for state register 'mdac_state_reg' in module 'MercuryIIDAC'
 ---------------------------------------------------------------------------------------------------
@@ -404,7 +503,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_r_reg' using encodin
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'mdac_state_reg' using encoding 'sequential' in module 'MercuryIIDAC'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1368.156 ; gain = 69.609
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1309.102 ; gain = 8.906
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -444,6 +543,7 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit         XORs := 6     
 	   4 Input      1 Bit         XORs := 1     
 +---Registers : 
+	               48 Bit    Registers := 1     
 	               32 Bit    Registers := 9     
 	               25 Bit    Registers := 1     
 	               24 Bit    Registers := 1     
@@ -462,7 +562,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 20    
 	                3 Bit    Registers := 6     
 	                2 Bit    Registers := 23    
-	                1 Bit    Registers := 115   
+	                1 Bit    Registers := 119   
 +---RAMs : 
 	              32K Bit	(4096 X 8 bit)          RAMs := 1     
 	               4K Bit	(512 X 8 bit)          RAMs := 6     
@@ -472,6 +572,7 @@ Detailed RTL Component Info :
 +---ROMs : 
 	                    ROMs := 2     
 +---Muxes : 
+	   2 Input   48 Bit        Muxes := 1     
 	  13 Input   32 Bit        Muxes := 1     
 	   2 Input   32 Bit        Muxes := 3     
 	   3 Input   32 Bit        Muxes := 2     
@@ -522,7 +623,7 @@ Detailed RTL Component Info :
 	   8 Input    2 Bit        Muxes := 4     
 	   5 Input    2 Bit        Muxes := 2     
 	   4 Input    2 Bit        Muxes := 2     
-	   2 Input    1 Bit        Muxes := 112   
+	   2 Input    1 Bit        Muxes := 114   
 	   6 Input    1 Bit        Muxes := 7     
 	   9 Input    1 Bit        Muxes := 11    
 	   8 Input    1 Bit        Muxes := 3     
@@ -552,11 +653,34 @@ DSP Report: operator pcm/right_scaled_r0 is absorbed into DSP pcm/right_scaled_r
 DSP Report: Generating DSP pcm/left_scaled_r_reg, operation Mode is: (A*B)'.
 DSP Report: register pcm/left_scaled_r_reg is absorbed into DSP pcm/left_scaled_r_reg.
 DSP Report: operator pcm/left_scaled_r0 is absorbed into DSP pcm/left_scaled_r_reg.
-WARNING: [Synth 8-3332] Sequential element (psg/FSM_onehot_state_r_reg[2]) is unused and will be removed from module audio.
-WARNING: [Synth 8-3332] Sequential element (psg/FSM_onehot_state_r_reg[1]) is unused and will be removed from module audio.
-WARNING: [Synth 8-3332] Sequential element (psg/FSM_onehot_state_r_reg[0]) is unused and will be removed from module audio.
+WARNING: [Synth 8-7129] Port sprite_lb_rddata[15] in module composer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_lb_rddata[14] in module composer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_lb_rddata[13] in module composer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_lb_rddata[12] in module composer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_lb_rddata[11] in module composer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_lb_rddata[10] in module composer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_attr[14] in module sprite_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_attr[13] in module sprite_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_attr[12] in module sprite_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port linebuf_rddata[11] in module sprite_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port linebuf_rddata[10] in module sprite_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[2] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[1] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[0] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[20] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[19] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[18] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[17] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[16] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[15] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[14] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[13] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[12] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[11] in module MercuryII_Vera is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_a[10] in module MercuryII_Vera is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1368.156 ; gain = 69.609
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1313.695 ; gain = 13.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -591,9 +715,20 @@ Block RAM: Preliminary Mapping Report (see note below)
 |vera0/sprite_line_buffer | linebuf_2b/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
 |vera0/sprite_line_buffer | linebuf_2c/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
 |vera0/sprite_line_buffer | linebuf_2d/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vera0/audio              | pcm/audio_fifo/mem_r_reg         | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
 +-------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+------------------------------+-----------+----------------------+-------------+
+|Module Name | RTL Object                   | Inference | Size (Depth x Width) | Primitives  | 
++------------+------------------------------+-----------+----------------------+-------------+
+|vera0/audio | psg/working_data_ram/mem_reg | Implied   | 16 x 23              | RAM32M x 4  | 
+|vera0/audio | psg/audio_attr_ram/mem_reg   | Implied   | 64 x 8               | RAM64M x 3  | 
++------------+------------------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
@@ -611,13 +746,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1368.156 ; gain = 69.609
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1331.152 ; gain = 30.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1368.156 ; gain = 69.609
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1346.898 ; gain = 46.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -641,7 +776,17 @@ Block RAM: Final Mapping Report
 |vera0/sprite_line_buffer | linebuf_2b/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
 |vera0/sprite_line_buffer | linebuf_2c/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
 |vera0/sprite_line_buffer | linebuf_2d/mem_reg               | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vera0/audio              | pcm/audio_fifo/mem_r_reg         | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
 +-------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++------------+------------------------------+-----------+----------------------+-------------+
+|Module Name | RTL Object                   | Inference | Size (Depth x Width) | Primitives  | 
++------------+------------------------------+-----------+----------------------+-------------+
+|vera0/audio | psg/working_data_ram/mem_reg | Implied   | 16 x 23              | RAM32M x 4  | 
+|vera0/audio | psg/audio_attr_ram/mem_reg   | Implied   | 64 x 8               | RAM64M x 3  | 
++------------+------------------------------+-----------+----------------------+-------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -649,10 +794,6 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (MDAC0/FSM_sequential_mdac_state_reg[3]) is unused and will be removed from module MercuryII_Vera.
-WARNING: [Synth 8-3332] Sequential element (MDAC0/FSM_sequential_mdac_state_reg[2]) is unused and will be removed from module MercuryII_Vera.
-WARNING: [Synth 8-3332] Sequential element (MDAC0/FSM_sequential_mdac_state_reg[1]) is unused and will be removed from module MercuryII_Vera.
-WARNING: [Synth 8-3332] Sequential element (MDAC0/FSM_sequential_mdac_state_reg[0]) is unused and will be removed from module MercuryII_Vera.
 INFO: [Synth 8-7052] The timing for the instance vera0/l0_line_buffer/linebuf_a/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance vera0/l0_line_buffer/linebuf_b/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance vera0/l0_line_buffer/linebuf_c/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
@@ -667,8 +808,9 @@ INFO: [Synth 8-7052] The timing for the instance vera0/sprite_line_buffer/linebu
 INFO: [Synth 8-7052] The timing for the instance vera0/sprite_line_buffer/linebuf_2b/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance vera0/sprite_line_buffer/linebuf_2c/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance vera0/sprite_line_buffer/linebuf_2d/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vera0/audio/pcm/audio_fifo/mem_r_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1368.156 ; gain = 69.609
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1397.980 ; gain = 97.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -686,55 +828,53 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1368.156 ; gain = 69.609
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1411.777 ; gain = 111.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1368.156 ; gain = 69.609
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1411.777 ; gain = 111.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1368.156 ; gain = 69.609
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1411.777 ; gain = 111.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1368.156 ; gain = 69.609
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1411.777 ; gain = 111.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1368.156 ; gain = 69.609
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1411.777 ; gain = 111.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1368.156 ; gain = 69.609
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-Static Shift Register Report:
-+---------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name    | RTL Name                                    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+---------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|MercuryII_Vera | vera0/video_composite/modulator/luma_reg[4] | 3      | 4     | NO           | NO                 | YES               | 4      | 0       | 
-+---------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1411.777 ; gain = 111.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++--------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                     | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mult_accum                      | Dynamic     | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pcm                             | (A*B)'      | 30     | 7      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pcm                             | (A*B)'      | 30     | 7      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|video_modulator_mult_u8xu8_pair | U xor       | -      | -      | -      | -      | 16     | -    | -    | -    | -    | -     | 0    | 0    | 
+|video_modulator_mult_u8xu8_pair | U xor       | -      | -      | -      | -      | 16     | -    | -    | -    | -    | -     | 0    | 0    | 
++--------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
 
 Report BlackBoxes: 
 +------+--------------+----------+
@@ -755,50 +895,55 @@ Report Cell Usage:
 |6     |palette_ram |     1|
 |7     |sprite_ram  |     1|
 |8     |BUFG        |     1|
-|9     |CARRY4      |   190|
-|10    |LUT1        |    64|
-|11    |LUT2        |   455|
-|12    |LUT3        |   454|
-|13    |LUT4        |   392|
-|14    |LUT5        |   515|
-|15    |LUT6        |   858|
-|16    |MUXF7       |    40|
-|17    |RAMB18E1    |    16|
-|20    |SRL16E      |     4|
-|21    |FDCE        |  1128|
-|22    |FDPE        |    21|
-|23    |FDRE        |   250|
-|24    |FDSE        |    17|
-|25    |IBUF        |    19|
-|26    |IOBUF       |     9|
-|27    |OBUF        |     7|
-|28    |OBUFDS      |     4|
-|29    |OBUFT       |    27|
+|9     |CARRY4      |   231|
+|10    |DSP48E1     |     5|
+|13    |LUT1        |    72|
+|14    |LUT2        |   637|
+|15    |LUT3        |   500|
+|16    |LUT4        |   493|
+|17    |LUT5        |   579|
+|18    |LUT6        |   940|
+|19    |MUXF7       |    40|
+|20    |RAM32M      |     4|
+|21    |RAM64M      |     3|
+|22    |RAMB18E1    |    16|
+|25    |RAMB36E1    |     1|
+|26    |FDCE        |  1329|
+|27    |FDPE        |    23|
+|28    |FDRE        |   398|
+|29    |FDSE        |    17|
+|30    |IBUF        |    19|
+|31    |IOBUF       |     9|
+|32    |OBUF        |     7|
+|33    |OBUFDS      |     4|
+|34    |OBUFT       |    27|
 +------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1368.156 ; gain = 69.609
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1411.777 ; gain = 111.582
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 135 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1368.156 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1368.156 ; gain = 69.609
+Synthesis finished with 0 errors, 0 critical warnings and 47 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1411.777 ; gain = 102.676
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1411.777 ; gain = 111.582
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1368.156 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 259 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1419.828 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 313 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1368.156 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1429.480 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 13 instances were transformed.
+  A total of 20 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 9 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 4 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 3 instances
 
-Synth Design complete, checksum: 3801281
+Synth Design complete, checksum: 423eb902
 INFO: [Common 17-83] Releasing license: Synthesis
-118 Infos, 198 Warnings, 2 Critical Warnings and 0 Errors encountered.
+126 Infos, 282 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1368.156 ; gain = 69.609
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1429.480 ; gain = 129.285
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/synth_1/MercuryII_Vera.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file MercuryII_Vera_utilization_synth.rpt -pb MercuryII_Vera_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Oct 20 12:13:58 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 25 11:41:18 2023...

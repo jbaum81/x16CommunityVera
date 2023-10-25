@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 5
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tftg256-1
 
@@ -99,6 +100,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/layer_line_buffer.v
   C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/graphics/layer_renderer.v
   C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/main_ram.v
+  C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/mult_accum.v
   C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/pcm.v
   C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/audio/psg.v
   C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/fpga/source/reset_sync.v

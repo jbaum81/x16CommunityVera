@@ -1126,5 +1126,4 @@ module addr_data(
         .add_or_sub(fx_add_or_sub_r),
         .output_32(ib_mult_accum_cache32)
     );
-
 endmodule
