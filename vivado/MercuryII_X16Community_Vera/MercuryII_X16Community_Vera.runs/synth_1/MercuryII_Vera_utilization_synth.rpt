@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Wed Oct 25 11:41:18 2023
+| Date         : Wed Oct 25 17:48:10 2023
 | Host         : DESKTOP-4FV4FV1 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file MercuryII_Vera_utilization_synth.rpt -pb MercuryII_Vera_utilization_synth.pb
 | Design       : MercuryII_Vera
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 2740 |     0 |          0 |     20800 | 13.17 |
-|   LUT as Logic             | 2712 |     0 |          0 |     20800 | 13.04 |
+| Slice LUTs*                | 2726 |     0 |          0 |     20800 | 13.11 |
+|   LUT as Logic             | 2698 |     0 |          0 |     20800 | 12.97 |
 |   LUT as Memory            |   28 |     0 |          0 |      9600 |  0.29 |
 |     LUT as Distributed RAM |   28 |     0 |            |           |       |
 |     LUT as Shift Register  |    0 |     0 |            |           |       |
@@ -58,9 +58,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 23    |          Yes |           - |          Set |
-| 1329  |          Yes |           - |        Reset |
+| 1377  |          Yes |           - |        Reset |
 | 17    |          Yes |         Set |            - |
-| 398   |          Yes |       Reset |            - |
+| 350   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -152,13 +152,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     | 1329 |        Flop & Latch |
-| LUT6     |  940 |                 LUT |
-| LUT2     |  637 |                 LUT |
-| LUT5     |  579 |                 LUT |
-| LUT3     |  500 |                 LUT |
-| LUT4     |  493 |                 LUT |
-| FDRE     |  398 |        Flop & Latch |
+| FDCE     | 1377 |        Flop & Latch |
+| LUT6     |  933 |                 LUT |
+| LUT2     |  640 |                 LUT |
+| LUT5     |  577 |                 LUT |
+| LUT4     |  494 |                 LUT |
+| LUT3     |  483 |                 LUT |
+| FDRE     |  350 |        Flop & Latch |
 | CARRY4   |  231 |          CarryLogic |
 | LUT1     |   72 |                 LUT |
 | MUXF7    |   40 |               MuxFx |

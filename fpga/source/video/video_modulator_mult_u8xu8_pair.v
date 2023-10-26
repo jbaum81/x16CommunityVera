@@ -11,11 +11,11 @@ module video_modulator_mult_u8xu8_pair (
     output wire [15:0] output_1_16,
     output wire [15:0] output_2_16);
     
-    //JB Ported to Xilinx DSP Multiplyer 
+    //JB Ported to Xilinx 
     //wire        [31:0] output_32;
     //assign output_1_16 = output_32[15:0];
     //assign output_2_16 = output_32[31:16];
-    
+
     //JB Port to Xilinx DSP Multiplyer 
     wire [47:0] P_high;
     wire [47:0] P_low;
@@ -72,7 +72,6 @@ module video_modulator_mult_u8xu8_pair (
       .A({22'h000000,input_2a_8}),      // 30-bit input: A data input
       .B({10'h000,input_2b_8})          // 18-bit input: B data input
    );
-
 
     //JB Ported to Xilinx DSP Multiplyer 
     /*

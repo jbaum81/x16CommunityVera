@@ -18,19 +18,19 @@ module mult_accum (
     wire [47:0] C = mult_enabled ? accumulator : {16'h0000,input_b_16,input_a_16};
     assign opMode[1:0] = mult_enabled ? 2'b01 : 2'b00; //Opmode Mux X
     assign opMode[3:2] = mult_enabled ? 2'b01 : 2'b00; //Opmode Mux Y
-    assign opMode[6:4] = (!mult_enabled || (mult_enabled && accumulate)) ? 3'b011 : 3'b000; //Opmode Mux Z
-    wire [3:0] aluMode = (accumulate && add_or_sub) ? 4'b0011 : 4'b0000; 
+    assign opMode[6:4] = 3'b011; //Opmode Mux Z
+    wire [3:0] aluMode = (mult_enabled && add_or_sub) ? 4'b0011 : 4'b0000; 
     
     
     wire [47:0] P;
     reg[47:0] accumulator = 0;
     assign output_32 = P[31:0];
     
-    always @(posedge clk) begin
+    always @(posedge clk or posedge reset_accum) begin
         if (reset_accum)
-            accumulator = 0;
+            accumulator <= 0;
         else if (accumulate)
-            accumulator = P;
+            accumulator <= P;
     end
     
     DSP48E1 #(
