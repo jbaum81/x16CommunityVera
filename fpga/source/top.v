@@ -49,7 +49,7 @@ module top(
     always @(posedge clk25) if (!por_cnt_r[7]) por_cnt_r <= por_cnt_r + 8'd1;
 
     //JB Adding system reset control. 
-    wire asyncReset = (!por_cnt_r[7] || !rst);
+    wire asyncReset = (!por_cnt_r[7] || rst);
 
     wire reset;
     reset_sync reset_sync_clk25(

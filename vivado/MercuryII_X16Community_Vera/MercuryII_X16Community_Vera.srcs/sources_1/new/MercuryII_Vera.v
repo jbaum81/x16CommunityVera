@@ -126,7 +126,7 @@ module MercuryII_Vera(
         .vera_audio_data_left(vera_audio_data_left),
         .vera_audio_data_right(vera_audio_data_right),
         .vera_audio_next_sample(vera_audio_next_sample),
-        .rst(rst)
+        .rst(!rst)
     ); 
     
     //HDMI
