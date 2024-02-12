@@ -35,9 +35,11 @@ module top(
     output wire       audio_data,
     
     //JB Surfacing Audio signals for MercuryII DAC
-    output wire [23:0]  vera_audio_data_left,       // 2's complement signed left data
-    output wire [23:0]  vera_audio_data_right,      // 2's complement signed right data
-    output wire         vera_audio_next_sample,
+    output wire [15:0] psg_left,
+    output wire [15:0] psg_right,
+    output wire [15:0] pcm_left,
+    output wire [15:0] pcm_right,
+
     //JB Add reset from system (Used primarily for power on reset. (Artix boots slower than ICE40)
     input wire rst 
     );
@@ -178,7 +180,8 @@ module top(
     reg        spi_txstart;
     wire       spi_busy;
     wire [7:0] spi_rxdata;
-
+    
+    //JB Surfaced for seperate output. 
     //reg [7:0] rddata;
     always @* case (extbus_a)
         5'h00: rddata = vram_addr_select_r ? vram_addr_1_r[7:0] : vram_addr_0_r[7:0];
@@ -222,7 +225,7 @@ module top(
                 6'h0: rddata = dc_border_color_r;
                 6'h1: rddata = dc_active_vstop_r[8:1];
                 6'h5: rddata = fx_fill_length_high;
-                default: rddata = 8'h01;
+                default: rddata = 8'h03;
             endcase
         end
 
@@ -258,13 +261,15 @@ module top(
     // Capture address / write-data at end of write cycle
     reg [4:0] rdaddr_r;
     reg [4:0] wraddr_r;
+    reg [4:0] wraddr_hold_r;
     reg [7:0] wrdata_r;
 
     always @(negedge bus_write) begin
         wrdata_r <= extbus_d;
+        wraddr_r <= wraddr_hold_r;
     end
     always @(posedge bus_write) begin
-        wraddr_r <= extbus_a;
+        wraddr_hold_r <= extbus_a;
     end
     always @(posedge bus_read) begin
         rdaddr_r <= extbus_a;
@@ -1038,7 +1043,8 @@ module top(
     );
     //JB - End Xilinx Block RAM IP (Artix Port)
 
-/* JB: disable Ice40 Block Ram (Artix Port)    palette_ram palette_ram(
+/* JB: disable Ice40 Block Ram (Artix Port)    
+    palette_ram palette_ram(
         .rst_i(1'b0),
         .wr_clk_i(clk),
         .rd_clk_i(clk),
@@ -1155,8 +1161,6 @@ module top(
             vga_vsync <= 0;
             //JB Added for DVI Signal
             vga_active <= 0;
-            //JB Added for DVI Signal
-            vga_active <= 0;
         end
 
         2'b11: begin
@@ -1254,10 +1258,12 @@ module top(
         .i2s_data(audio_data),
         
         //JB surface audio signals for MercuryII DAC
-        .next_sample(vera_audio_next_sample),
-        .left_data(vera_audio_data_left),
-        .right_data(vera_audio_data_right)
+        .psg_left(psg_left),
+        .psg_right(psg_right),
+        .pcm_left(pcm_left),
+        .pcm_right(pcm_right)
         );
+
 
     //////////////////////////////////////////////////////////////////////////
     // IRQ

@@ -25,7 +25,7 @@ module mult_accum (
     wire [47:0] P;
     reg[47:0] accumulator = 0;
     assign output_32 = P[31:0];
-    
+
     always @(posedge clk or posedge reset_accum) begin
         if (reset_accum)
             accumulator <= 0;
@@ -96,7 +96,6 @@ module mult_accum (
         .SIGNEXTIN(1'b0),
         .SIGNEXTOUT()
     );
-    
     defparam i_mult16x16.TOPOUTPUT_SELECT = 2'b00; // Adder output (non registered)
     defparam i_mult16x16.BOTOUTPUT_SELECT = 2'b00; // Adder output (non registered)
     defparam i_mult16x16.A_SIGNED = 1'b1; //Signed Inputs

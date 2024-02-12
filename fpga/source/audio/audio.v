@@ -28,17 +28,18 @@ module audio(
     output wire        i2s_bck,
     output wire        i2s_data,
     //JB surface audio signals for MercuryII DAC
-    output wire        next_sample,
-    output wire [23:0] left_data,
-    output wire [23:0] right_data);
+    output wire [15:0] psg_left,
+    output wire [15:0] psg_right,
+    output wire [15:0] pcm_left,
+    output wire [15:0] pcm_right
+    );
     
     //JB next_sample now output wire for MercuryII DAC
     //wire        next_sample;
-    wire [15:0] psg_left;
-    wire [15:0] psg_right;
-
-    wire [15:0] pcm_left;
-    wire [15:0] pcm_right;
+    //wire [15:0] psg_left;
+    //wire [15:0] psg_right;
+    //wire [15:0] pcm_left;
+    //wire [15:0] pcm_right;
 
     //////////////////////////////////////////////////////////////////////////
     // Programmable Sound Generator
@@ -97,11 +98,8 @@ module audio(
     wire [16:0] mix_l = psg_l + pcm_l;
     wire [16:0] mix_r = psg_r + pcm_r;
 
-    //JB left_data and right_data now output wires, surfaced for MercuryII DAC
-    //wire [23:0] left_data = {mix_l, 7'b0};
-    //wire [23:0] right_data = {mix_r, 7'b0};
-    assign left_data = {mix_l, 7'b0};
-    assign right_data = {mix_r, 7'b0};
+    wire [23:0] left_data = {mix_l, 7'b0};
+    wire [23:0] right_data = {mix_r, 7'b0};
 
     dacif dacif(
         .rst(rst),
