@@ -2,7 +2,11 @@
 
 module main_ram(
     input  wire        clk,
-
+    
+    //JB Xilinx Port, Add faster clock for memory. 
+    input  wire        clk250,
+    input  wire        if0_strobe,
+    
     // Slave bus interface
     input  wire [14:0] bus_addr,
     input  wire [31:0] bus_wrdata,
@@ -18,7 +22,8 @@ module main_ram(
     reg bus_addr14;
     always @(posedge clk) bus_addr14 <= bus_addr[14];
 
-    always @* bus_rddata = bus_addr14 ? blk32_rddata : blk10_rddata;
+    //JB - Removed part of Xilinx port. 
+    //always @* bus_rddata = bus_addr14 ? blk32_rddata : blk10_rddata;
 
 `ifdef __ICARUS__
     reg [31:0] blk10[0:16383];
@@ -105,45 +110,86 @@ module main_ram(
 
 `else
 
-    //JB - Begin Xilinx Block RAM IP (Artix Port)
-    wire [1:0] blk0we = (bus_write && blk10_cs) ? {bus_wrnibblesel[2], bus_wrnibblesel[0]} : 2'b00;
-    wire [1:0] blk1we = (bus_write && blk10_cs) ? {bus_wrnibblesel[6], bus_wrnibblesel[4]} : 2'b00;
-    wire [1:0] blk2we = (bus_write && blk32_cs) ? {bus_wrnibblesel[2], bus_wrnibblesel[0]} : 2'b00;
-    wire [1:0] blk3we = (bus_write && blk32_cs) ? {bus_wrnibblesel[6], bus_wrnibblesel[4]} : 2'b00;
+//JB - Begin Xilinx Block RAM IP (Artix Port)
+    reg [3:0] clk128_r = 0;
+    wire clk128 = clk128_r[0];
+    always @(posedge clk250) clk128_r <= clk128_r +1;
     
+    reg [14:0] bus_addr_r = 0;
+    reg [31:0] bus_wrdata_r = 0;
+    reg  [7:0] bus_wrnibblesel_r = 0;
+    reg [1:0] blk10we = 2'b00;
+    reg [1:0] blk32we = 2'b00;
+
+    reg [3:0] clk_r = 0;
+    reg [3:0] memState = 0;
+    always @(posedge clk128) begin
+        clk_r <= {clk_r[2:0], clk};
+        case (memState)
+            4'h0: begin
+                blk10we <= 2'b00;
+                blk32we <= 2'b00;
+                if (clk_r[2:0] == 3'b001) begin
+                    bus_rddata <= bus_addr_r[14] ? blk32_rddata : blk10_rddata;
+                    bus_addr_r <= bus_addr;
+                    bus_wrdata_r <= bus_wrdata;
+                    bus_wrnibblesel_r <= bus_wrnibblesel;
+                    if (bus_write) memState <= 4'h1;
+                end
+            end
+            4'h1: begin
+                //Clock Cycle to allow read
+                memState <= 4'h2;
+            end
+            4'h2: begin
+                bus_wrdata_r[3:0] <= bus_wrnibblesel_r[0] ? bus_wrdata_r[3:0] : (bus_addr_r[14] ? blk32_rddata[3:0] : blk10_rddata[3:0] );
+                bus_wrdata_r[7:4] <= bus_wrnibblesel_r[1] ? bus_wrdata_r[7:4] : (bus_addr_r[14] ? blk32_rddata[7:4] : blk10_rddata[7:4] );
+                bus_wrdata_r[11:8] <= bus_wrnibblesel_r[2] ? bus_wrdata_r[11:8] : (bus_addr_r[14] ? blk32_rddata[11:8] : blk10_rddata[11:8] );
+                bus_wrdata_r[15:12] <= bus_wrnibblesel_r[3] ? bus_wrdata_r[15:12] : (bus_addr_r[14] ? blk32_rddata[15:12] : blk10_rddata[15:12] );
+                bus_wrdata_r[19:16] <= bus_wrnibblesel_r[4] ? bus_wrdata_r[19:16] : (bus_addr_r[14] ? blk32_rddata[19:16] : blk10_rddata[19:16] );
+                bus_wrdata_r[23:20] <= bus_wrnibblesel_r[5] ? bus_wrdata_r[23:20] : (bus_addr_r[14] ? blk32_rddata[23:20] : blk10_rddata[23:20] );
+                bus_wrdata_r[27:24] <= bus_wrnibblesel_r[6] ? bus_wrdata_r[27:24] : (bus_addr_r[14] ? blk32_rddata[27:24] : blk10_rddata[27:24] );
+                bus_wrdata_r[31:28] <= bus_wrnibblesel_r[7] ? bus_wrdata_r[31:28] : (bus_addr_r[14] ? blk32_rddata[31:28] : blk10_rddata[31:28] );
+                blk10we <= bus_addr_r[14] ? 2'b00 : 2'b11;
+                blk32we <= bus_addr_r[14] ? 2'b11 : 2'b00;
+                memState <= 2'h00;
+            end
+        endcase
+    end
+
     SP256K blk0 (
-      .clka(clk),    // input wire clka
+      .clka(clk128),    // input wire clka
       .ena(1'b1),      // input wire ena
-      .wea(blk0we),      // input wire [1 : 0] wea
-      .addra(bus_addr[13:0]),  // input wire [13 : 0] addra
-      .dina(bus_wrdata[15:0]),    // input wire [15 : 0] dina
+      .wea(blk10we),      // input wire [1 : 0] wea
+      .addra(bus_addr_r[13:0]),  // input wire [13 : 0] addra
+      .dina(bus_wrdata_r[15:0]),    // input wire [15 : 0] dina
       .douta(blk10_rddata[15:0])  // output wire [15 : 0] douta
     );
     
     SP256K blk1 (
-      .clka(clk),    // input wire clka
+      .clka(clk128),    // input wire clka
       .ena(1'b1),      // input wire ena
-      .wea(blk1we),      // input wire [1 : 0] wea
-      .addra(bus_addr[13:0]),  // input wire [13 : 0] addra
-      .dina(bus_wrdata[31:16]),    // input wire [15 : 0] dina
+      .wea(blk10we),      // input wire [1 : 0] wea
+      .addra(bus_addr_r[13:0]),  // input wire [13 : 0] addra
+      .dina(bus_wrdata_r[31:16]),    // input wire [15 : 0] dina
       .douta(blk10_rddata[31:16])  // output wire [15 : 0] douta
     );
     
     SP256K blk2 (
-      .clka(clk),    // input wire clka
+      .clka(clk128),    // input wire clka
       .ena(1'b1),      // input wire ena
-      .wea(blk2we),      // input wire [1 : 0] wea
-      .addra(bus_addr[13:0]),  // input wire [13 : 0] addra
-      .dina(bus_wrdata[15:0]),    // input wire [15 : 0] dina
+      .wea(blk32we),      // input wire [1 : 0] wea
+      .addra(bus_addr_r[13:0]),  // input wire [13 : 0] addra
+      .dina(bus_wrdata_r[15:0]),    // input wire [15 : 0] dina
       .douta(blk32_rddata[15:0])  // output wire [15 : 0] douta
     );
     
     SP256K blk3 (
-      .clka(clk),    // input wire clka
+      .clka(clk128),    // input wire clka
       .ena(1'b1),      // input wire ena
-      .wea(blk3we),      // input wire [1 : 0] wea
-      .addra(bus_addr[13:0]),  // input wire [13 : 0] addra
-      .dina(bus_wrdata[31:16]),    // input wire [15 : 0] dina
+      .wea(blk32we),      // input wire [1 : 0] wea
+      .addra(bus_addr_r[13:0]),  // input wire [13 : 0] addra
+      .dina(bus_wrdata_r[31:16]),    // input wire [15 : 0] dina
       .douta(blk32_rddata[31:16])  // output wire [15 : 0] douta
     );
     

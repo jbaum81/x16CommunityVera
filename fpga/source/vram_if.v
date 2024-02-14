@@ -2,7 +2,10 @@
 
 module vram_if(
     input  wire        clk,
-
+    
+    //JB Xilinx Port, Add faster clock for memory. 
+    input  wire        clk250,
+    
     // Interface 0 - 8-bit (highest priority)
     input  wire [16:0] if0_addr,
     input  wire        if0_addr_nibble,
@@ -46,6 +49,10 @@ module vram_if(
 
     main_ram main_ram(
         .clk(clk),
+        //JB Xilinx Port, Add faster clock for memory. 
+        .clk250(clk250),
+        .if0_strobe(if0_strobe),
+        
         .bus_addr(ram_addr),
         .bus_wrdata(ram_wrdata),
         .bus_wrnibblesel(ram_wrnibblesel),

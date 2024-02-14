@@ -2,6 +2,9 @@
 
 module top(
     input  wire       clk25,
+    
+    //JB Xilinx Port, Add faster clock for memory. 
+    input  wire        clk250,
 
     // External bus interface
     input  wire       extbus_cs_n,   /* Chip select */
@@ -701,6 +704,9 @@ module top(
 
     vram_if vram_if(
         .clk(clk),
+        
+        //JB Xilinx Port, Add faster clock for memory. 
+        .clk250(clk250),
 
         // Interface 0 - 8-bit (highest priority)
         .if0_addr(ib_addr_r),
