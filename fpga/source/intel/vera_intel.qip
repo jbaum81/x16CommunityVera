@@ -1,0 +1,48 @@
+# VERA for Intel FPGAs (Cyclone V / MiSTer).
+# Include this one file from a Quartus project:
+#   set_global_assignment -name QIP_FILE <path>/fpga/source/intel/vera_intel.qip
+# Shared VERA RTL comes from fpga/source; the vendor-specific modules
+# (main_ram, SP256K, palette_ram, sprite_ram, mult_accum,
+# video_modulator_mult_u8xu8_pair) come from this intel/ folder and use the same
+# module names and ports as the Xilinx port, so top.v and vram_if.v are shared.
+
+set src [file join $::quartus(qip_path) ".."]
+
+# Shared VERA RTL
+foreach f {
+    top.v
+    addr_data.v
+    reset_sync.v
+    vram_if.v
+    dpram.v
+    audio/audio.v
+    audio/audio_fifo.v
+    audio/dacif.v
+    audio/pcm.v
+    audio/psg.v
+    graphics/composer.v
+    graphics/layer_line_buffer.v
+    graphics/layer_renderer.v
+    graphics/sprite_line_buffer.v
+    graphics/sprite_renderer.v
+    spi/spictrl.v
+    video/video_composite.v
+    video/video_modulator.v
+    video/video_modulator_coslut.v
+    video/video_modulator_sinlut.v
+    video/video_vga.v
+} {
+    set_global_assignment -name VERILOG_FILE [file join $src $f]
+}
+
+# Intel-specific modules
+foreach f {
+    main_ram.v
+    SP256K.v
+    palette_ram.v
+    sprite_ram.v
+    mult_accum.v
+    video_modulator_mult_u8xu8_pair.v
+} {
+    set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) $f]
+}
