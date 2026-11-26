@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Thu Oct 19 20:41:19 2023
+// Date        : Thu Oct 19 20:41:18 2023
 // Host        : DESKTOP-4FV4FV1 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.gen/sources_1/ip/palette_ram/palette_ram_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top palette_ram -prefix
+//               palette_ram_ palette_ram_stub.v
 // Design      : palette_ram
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tftg256-1

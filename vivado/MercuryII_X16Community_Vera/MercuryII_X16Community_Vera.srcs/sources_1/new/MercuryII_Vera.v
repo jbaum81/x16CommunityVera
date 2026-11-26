@@ -78,9 +78,9 @@ module MercuryII_Vera(
     wire vga_vsync;
     wire vga_active;
     
-    wire [23:0]  vera_audio_data_left;
-    wire [23:0]  vera_audio_data_right;
-    wire         vera_audio_next_sample;
+    
+    wire signed [15:0] opm_left_data_w, opm_right_data_w, psg_left_data_w, psg_right_data_w, pcm_left_data_w, pcm_right_data_w;
+    wire opm_left_sample_w, opm_right_sample_w, i2s_lrck_w, i2s_bck_w, i2s_data_w;
     
     reg POR = 1;
     reg [23:0] PORcnt = 0; 
@@ -100,9 +100,11 @@ module MercuryII_Vera(
         .clk_in1(clk)
     );
     
+
     //VERA
     top vera0(
         .clk25(clk25),
+        .clk250(hdmiClk),
         .extbus_cs_n(extbus_cs_n),
         .extbus_rd_n(extbus_rd_n),
         .extbus_wr_n(extbus_wr_n),
@@ -120,15 +122,17 @@ module MercuryII_Vera(
         .spi_mosi(spi_mosi),
         .spi_miso(spi_miso),
         .spi_ssel_n_sd(spi_cs),
-        .audio_lrck(),
-        .audio_bck(),
-        .audio_data(),
-        .vera_audio_data_left(vera_audio_data_left),
-        .vera_audio_data_right(vera_audio_data_right),
-        .vera_audio_next_sample(vera_audio_next_sample),
+        .audio_lrck(i2s_lrck_w),
+        .audio_bck(i2s_bck_w),
+        .audio_data(i2s_data_w),
+        .psg_left(psg_left_data_w),
+        .psg_right(psg_right_data_w),
+        .pcm_left(pcm_left_data_w),
+        .pcm_right(pcm_right_data_w),
         .rst(!rst)
     ); 
-    
+
+
     //HDMI
     hdmiEncoder enc(  
         .vgaClk(clk25),
@@ -145,16 +149,26 @@ module MercuryII_Vera(
         .TMDSn_Clk(TMDSn_clock)
     );  
     
+    
     //MercuryII DAC
     MercuryIIDAC MDAC0(
-        .clk(clk25),
-        .rst(!rst),
-        .vera_audio_data_left(vera_audio_data_left),
-        .vera_audio_data_right(vera_audio_data_right),
-        .vera_audio_next_sample(vera_audio_next_sample),
-        .dac_sck(dac_sck),
-        .dac_csn(dac_csn),
-        .dac_mosi(dac_sdi),
-        .dac_ldac(dac_ldac)
+        .clk_25_i(clk25),
+        .rst_i(!rst),
+        .opm_right_data_i(opm_right_data_w),
+        .opm_left_data_i(opm_left_data_w),
+        .opm_left_sample_i(opm_left_sample_w),
+        .opm_right_sample_i(opm_right_sample_w),
+        .psg_left_data_i(psg_left_data_w),
+        .psg_right_data_i(psg_right_data_w),
+        .pcm_left_data_i(pcm_left_data_w),
+        .pcm_right_data_i(pcm_right_data_w),
+        .dac_sck_o(dac_sck),
+        .dac_cs_no(dac_csn),
+        .dac_sdi_o(dac_sdi),
+        .dac_ldac_o(dac_ldac), 
+        .i2s_lrck_i(i2s_lrck_w),
+        .i2s_bck_i(i2s_bck_w),
+        .i2s_data_i(i2s_data_w),
+        .i2s_data_o()
     );
 endmodule

@@ -32,7 +32,7 @@ module mult_accum (
         else if (accumulate)
             accumulator <= P;
     end
-    
+
     DSP48E1 #(
       // Feature Control Attributes: Data Path Selection
       .A_INPUT("DIRECT"),               // Selects A input source, "DIRECT" (A port) or "CASCADE" (ACIN port)
@@ -63,8 +63,6 @@ module mult_accum (
       .CARRYIN(1'b0)                   // 1-bit input: Carry input signal
    );
 
-
-    
     //JB Ported to Artix 7
     /*
     pmi_dsp i_mult16x16 ( // port interfaces

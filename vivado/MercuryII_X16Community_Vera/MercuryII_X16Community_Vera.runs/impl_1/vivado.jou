@@ -2,12 +2,12 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Wed Oct 25 17:48:17 2023
-# Process ID: 23108
-# Current directory: C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/impl_1
+# Start of session at: Tue Feb 13 19:03:27 2024
+# Process ID: 175608
+# Current directory: C:/Development/Vera/x16CommunityVera_ArtixDVI/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/impl_1
 # Command line: vivado.exe -log MercuryII_Vera.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source MercuryII_Vera.tcl -notrace
-# Log file: C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/impl_1/MercuryII_Vera.vdi
-# Journal file: C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/impl_1\vivado.jou
-# Running On: DESKTOP-4FV4FV1, OS: Windows, CPU Frequency: 3610 MHz, CPU Physical cores: 12, Host memory: 34106 MB
+# Log file: C:/Development/Vera/x16CommunityVera_ArtixDVI/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/impl_1/MercuryII_Vera.vdi
+# Journal file: C:/Development/Vera/x16CommunityVera_ArtixDVI/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/impl_1\vivado.jou
+# Running On: DESKTOP-4FV4FV1, OS: Windows, CPU Frequency: 3610 MHz, CPU Physical cores: 12, Host memory: 34109 MB
 #-----------------------------------------------------------
 source MercuryII_Vera.tcl -notrace

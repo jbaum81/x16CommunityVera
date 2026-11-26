@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/palette_ram_synth_1'
+HD_PWD='C:/Development/Vera/x16CommunityVera_ArtixDVI/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.runs/palette_ram_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -21,6 +21,7 @@ module video_modulator_mult_u8xu8_pair (
     wire [47:0] P_low;
     assign output_1_16 = P_low[15:0];
     assign output_2_16 = P_high[15:0];
+
     DSP48E1 #(
       .A_INPUT("DIRECT"),               // Selects A input source, "DIRECT" (A port) or "CASCADE" (ACIN port)
       .B_INPUT("DIRECT"),               // Selects B input source, "DIRECT" (B port) or "CASCADE" (BCIN port)

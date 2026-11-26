@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/Jason/Development/X16/Vera/X16Community_ArtixDVI/x16CommunityVera/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc rfile:../../../MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Development/Vera/x16CommunityVera_ArtixDVI/vivado/MercuryII_X16Community_Vera/MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc rfile:../../../MercuryII_X16Community_Vera.srcs/constrs_1/new/MercuryII_Vera.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:16 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN N14 IOSTANDARD LVCMOS33} [get_ports clk]
 set_property src_info {type:XDC file:1 line:17 export:INPUT save:INPUT read:READ} [current_design]
