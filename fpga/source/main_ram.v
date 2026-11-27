@@ -111,9 +111,12 @@ module main_ram(
 `else
 
 //JB - Begin Xilinx Block RAM IP (Artix Port)
-    reg [3:0] clk128_r = 0;
-    wire clk128 = clk128_r[0];
-    always @(posedge clk250) clk128_r <= clk128_r +1;
+//   clk250 is the fast memory clock port (name shared with the Intel port): it must be a
+//   real clock from the board's PLL/MMCM, phase-related to clk (100 MHz, as on the
+//   MiSTer). It used to be divided down here from 250 MHz by a counter bit, which left
+//   all of this logic and its crossings with clk unchecked by timing analysis, so VRAM
+//   reads/writes worked or failed depending on placement.
+    wire clk128 = clk250;
     
     reg [14:0] bus_addr_r = 0;
     reg [31:0] bus_wrdata_r = 0;
@@ -122,14 +125,18 @@ module main_ram(
     reg [1:0] blk32we = 2'b00;
 
     reg [3:0] clk_r = 0;
+    // clk toggles this once per cycle; the fast clock watches it (sampling the clk net
+    // itself as data was a race once both clocks come from one PLL with aligned edges)
+    reg ph_clk = 1'b0;
+    always @(posedge clk) ph_clk <= !ph_clk;
     reg [3:0] memState = 0;
     always @(posedge clk128) begin
-        clk_r <= {clk_r[2:0], clk};
+        clk_r <= {clk_r[2:0], ph_clk};
         case (memState)
             4'h0: begin
                 blk10we <= 2'b00;
                 blk32we <= 2'b00;
-                if (clk_r[2:0] == 3'b001) begin
+                if (clk_r[0] ^ clk_r[1]) begin        // once per clk cycle, 2 fast cycles after its edge
                     bus_rddata <= bus_addr_r[14] ? blk32_rddata : blk10_rddata;
                     bus_addr_r <= bus_addr;
                     bus_wrdata_r <= bus_wrdata;

@@ -120,14 +120,18 @@ module main_ram(
     reg [1:0] blk32we = 2'b00;
 
     reg [3:0] clk_r = 0;
+    // clk toggles this once per cycle; the fast clock watches it (sampling the clk net
+    // itself as data was a race once both clocks come from one PLL with aligned edges)
+    reg ph_clk = 1'b0;
+    always @(posedge clk) ph_clk <= !ph_clk;
     reg [3:0] memState = 0;
     always @(posedge clk250) begin
-        clk_r <= {clk_r[2:0], clk};
+        clk_r <= {clk_r[2:0], ph_clk};
         case (memState)
             4'h0: begin
                 blk10we <= 2'b00;
                 blk32we <= 2'b00;
-                if (clk_r[2:0] == 3'b001) begin
+                if (clk_r[0] ^ clk_r[1]) begin        // once per clk cycle, 2 fast cycles after its edge
                     bus_rddata <= bus_addr_r[14] ? blk32_rddata : blk10_rddata;
                     bus_addr_r <= bus_addr;
                     bus_wrdata_r <= bus_wrdata;
